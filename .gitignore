@@ -1,12 +1,31 @@
-node_modules
-.next
-out
+@"
+# Dependencies
+/node_modules/
+
+# Next.js
+/.next/
+/out/
+
+# Build
+/build/
+
+# Environment variables
 .env
 .env.local
-.env.production
-.vercel
-.DS_Store
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Vercel
+.vercel/
+
+# Logs
 npm-debug.log*
-pnpm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+pnpm-debug.log*
+
+# Misc
+.DS_Store
+*.pem
+"@ | Set-Content .gitignore

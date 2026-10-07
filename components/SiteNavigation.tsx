@@ -4,14 +4,14 @@ import { useEffect, useMemo, useState } from "react";
 import { Lang, useLanguage } from "@/components/LanguageProvider";
 
 const navLabels = {
-  sk: ["Úvod","Služby","Technológie","Riešenia","Spolupráca","Architektúra","Kontakt"],
-  cs: ["Úvod","Služby","Technologie","Řešení","Spolupráce","Architektura","Kontakt"],
-  en: ["Home","Services","Technology","Solutions","Process","Architecture","Contact"],
-  de: ["Start","Leistungen","Technologie","Lösungen","Zusammenarbeit","Architektur","Kontakt"],
-  pl: ["Start","Usługi","Technologie","Rozwiązania","Współpraca","Architektura","Kontakt"],
-  es: ["Inicio","Servicios","Tecnología","Soluciones","Proceso","Arquitectura","Contacto"],
+  sk: ["Úvod","Služby","Referencie","Kalkulačka","Technológie","Riešenia","Spolupráca","Architektúra","Kontakt"],
+  cs: ["Úvod","Služby","Reference","Kalkulačka","Technologie","Řešení","Spolupráce","Architektura","Kontakt"],
+  en: ["Home","Services","References","Estimator","Technology","Solutions","Process","Architecture","Contact"],
+  de: ["Start","Leistungen","Referenzen","Kalkulator","Technologie","Lösungen","Zusammenarbeit","Architektur","Kontakt"],
+  pl: ["Start","Usługi","Referencje","Kalkulator","Technologie","Rozwiązania","Współpraca","Architektura","Kontakt"],
+  es: ["Inicio","Servicios","Referencias","Calculadora","Tecnología","Soluciones","Proceso","Arquitectura","Contacto"],
 };
-const ids = ["top","sluzby","technologie","riesenia","proces","architektura","kontakt"];
+const ids = ["top","sluzby","referencie","kalkulacka","technologie","riesenia","proces","architektura","kontakt"];
 const langs: {code:Lang; label:string}[] = [
   {code:"sk",label:"SK"},{code:"cs",label:"CZ"},{code:"en",label:"EN"},{code:"de",label:"DE"},{code:"pl",label:"PL"},{code:"es",label:"ES"}
 ];
@@ -55,7 +55,7 @@ export default function SiteNavigation(){
   return <>
     <header className={`site-header premium-header ${scrolled?"is-scrolled":""}`}>
       <button className="brand brand-button" type="button" onClick={()=>goTo("top")} aria-label="TUTKA"><span className="brand-mark">T</span><span className="brand-copy"><strong>TUTKA</strong><small>DIGITAL · AI · DATA</small></span></button>
-      <nav className="desktop-nav" aria-label="Navigation">{sections.slice(1,5).map(s=><button type="button" key={s.id} className={activeId===s.id?"active":""} onClick={()=>goTo(s.id)}>{s.label}</button>)}</nav>
+      <nav className="desktop-nav" aria-label="Navigation">{sections.filter(s=>["sluzby","referencie","kalkulacka","technologie","kontakt"].includes(s.id)).map(s=><button type="button" key={s.id} className={activeId===s.id?"active":""} onClick={()=>goTo(s.id)}>{s.label}</button>)}</nav>
       <div className="header-actions">
         <div className="language-switcher" aria-label="Language">{langs.map(item=><button type="button" key={item.code} className={lang===item.code?"active":""} onClick={()=>setLang(item.code)}>{item.label}</button>)}</div>
         <a className="header-email" href={`mailto:${email}`}><MailIcon/><span>{email}</span></a>

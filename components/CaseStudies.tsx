@@ -1,79 +1,152 @@
 "use client";
+
+import { useEffect, useState } from "react";
 import { useLanguage } from "@/components/LanguageProvider";
 
-const base=[
- {name:"FROST a.s.",tag:"Power BI · API · Automation"},
- {name:"HOLLEN s.r.o.",tag:"Planning · Power BI · Operations"},
- {name:"VEDOS",tag:"Logistics · Planning · Workflow"},
- {name:"BETONOVEPLOTY.eu",tag:"Web · Next.js · UX"},
- {name:"TVOJBYT.sk",tag:"Flutter · Mobile · Custom App"},
- {name:"H+EKO",tag:"Ecoray · Power Query · Legacy Integration"},
- {name:"DOBROTKA.online",tag:"Web · Deployment · Digital"},
- {name:"QL INDUSTRIAL SERVICES",tag:"Workforce · KPI · Hungary"},
- {name:"ARBOPARK",tag:"Power BI · MSSQL · Data Integration"}
-];
-
-const copy:any={
- sk:{k:"REFERENCIE & PRÍPADOVÉ ŠTÚDIE",h:"Riešenia postavené na reálnych procesoch.",p:"Vybrané realizácie naprieč výrobou, logistikou, BI, webom a mobilnými aplikáciami. Uvádzam konkrétny rozsah dodaného riešenia bez vymýšľania marketingových metrík.",partners:"Partneri a realizácie",review:"Textové recenzie zverejňujem až po odsúhlasení klientom. Nižšie preto prezentujem overiteľný rozsah realizovaných riešení.",items:[
-  ["Plánovanie a reporting výrobných procesov","Nastavenie plánovania v Power BI, automatizované dopĺňanie dát cez shell skripty, evidencia a zakresľovanie kamerových bodov v celom objekte, kontrolný Power BI reporting a výpočty spotreby múky prepojené cez API."],
-  ["Operatívne plánovanie do 24 hodín","Kompletný plánovací nástroj založený na spotrebe výrobných liniek, sledovanie obalového materiálu a implementácia Power BI pre operatívny aj manažérsky pohľad."],
-  ["Logistika a plánovanie prebaľovacej linky","Riešenie logistiky navážania paliet, plánovanie kapacity a toku prebaľovacej linky a podpora rozhodovania nad prevádzkovými dátami."],
-  ["Kompletné webové riešenie","Návrh, konfigurácia a realizácia webovej prezentácie vrátane štruktúry obsahu, používateľského rozhrania, formulárov, technického nastavenia a produkčného nasadenia."],
-  ["Flutter aplikácia na mieru","Vývoj mobilnej aplikácie na mieru vo Flutteri s dôrazom na multiplatformové použitie, používateľský tok a pripravenosť na ďalšie API a dátové integrácie."],
-  ["Prepojenie starého systému Ecoray","Napojenie na existujúci systém Ecoray a jeho databázu, automatické získavanie a transformácia dát cez Power Query a príprava dátového toku pre ďalšie reportovanie."],
-  ["Kompletné nastavenie webovej stránky","Kompletná príprava webového riešenia od štruktúry a dizajnu cez technickú konfiguráciu až po nasadenie a základnú prevádzkovú pripravenosť."],
-  ["Kumulatívne plánovanie potreby pracovníkov","Kumulatívne sledovanie potreby pracovníkov, KPI monitoring pre prevádzku v Maďarsku a reporting pre hlavného partnera s dôrazom na kapacitu, plnenie a operatívne rozhodovanie."],
-  ["Power BI napojené na Microsoft SQL Server","Nastavenie Power BI reportingu a priame prepojenie na Microsoft SQL Server vrátane prípravy dátových zdrojov, modelu a analytických výstupov."]]},
- cs:{k:"REFERENCE & PŘÍPADOVÉ STUDIE",h:"Řešení postavená na reálných procesech.",p:"Vybrané realizace ve výrobě, logistice, BI, webu a mobilních aplikacích. Uvádím konkrétní rozsah dodaného řešení bez vymyšlených marketingových metrik.",partners:"Partneři a realizace",review:"Textové recenze zveřejňuji až po schválení klientem. Níže proto uvádím konkrétní rozsah realizovaných řešení.",items:[
-  ["Plánování a reporting výrobních procesů","Nastavení plánování v Power BI, automatizované doplňování dat pomocí shell skriptů, evidence a zakreslení kamerových bodů v celém objektu, kontrolní reporting a výpočty spotřeby mouky propojené přes API."],
-  ["Operativní plánování do 24 hodin","Kompletní plánovací nástroj založený na spotřebě výrobních linek, sledování obalového materiálu a implementace Power BI pro operativní i manažerský pohled."],
-  ["Logistika a plánování přebalovací linky","Řešení logistiky navážení palet, plánování kapacity a toku přebalovací linky a podpora rozhodování nad provozními daty."],
-  ["Kompletní webové řešení","Návrh a realizace webu včetně obsahové struktury, UI, formulářů, technické konfigurace a produkčního nasazení."],
-  ["Flutter aplikace na míru","Vývoj mobilní aplikace na míru ve Flutteru s důrazem na multiplatformní použití, uživatelský tok a připravenost na API a datové integrace."],
-  ["Propojení starého systému Ecoray","Napojení na existující Ecoray a databázi, automatické získávání a transformace dat přes Power Query a příprava datového toku pro reporting."],
-  ["Kompletní nastavení webu","Příprava webového řešení od struktury a designu přes technickou konfiguraci až po nasazení a provozní připravenost."],
-  ["Kumulativní plánování potřeby pracovníků","Sledování kumulativní potřeby pracovníků, KPI monitoring v Maďarsku a reporting pro hlavního partnera se zaměřením na kapacitu a plnění."],
-  ["Power BI propojené s Microsoft SQL Server","Nastavení Power BI reportingu a přímé propojení s Microsoft SQL Server včetně datových zdrojů, modelu a analytických výstupů."]]},
- en:{k:"REFERENCES & CASE STUDIES",h:"Solutions built around real operations.",p:"Selected work across manufacturing, logistics, BI, web and mobile apps. The descriptions focus on delivered scope rather than invented marketing metrics.",partners:"Partners & delivered projects",review:"Written testimonials are published only with client approval. The section below therefore presents the concrete scope of delivered solutions.",items:[
-  ["Production planning and operational reporting","Power BI planning, automated data completion through shell scripts, mapping of camera points across the facility, control reporting and API-connected flour-consumption calculations."],
-  ["Operational planning within 24 hours","A complete planning tool driven by production-line consumption, packaging-material tracking and Power BI implementation for operational and management views."],
-  ["Pallet logistics and repacking-line planning","Inbound pallet logistics, capacity and flow planning for the repacking line, with operational data supporting day-to-day decisions."],
-  ["Complete website solution","Website structure, interface, forms, technical configuration and production deployment delivered as one end-to-end web solution."],
-  ["Custom Flutter application","A tailored Flutter mobile app focused on cross-platform use, clear user flows and readiness for further API and data integrations."],
-  ["Legacy Ecoray integration","Connection to the existing Ecoray system and database, automated extraction and transformation through Power Query and a reusable reporting data flow."],
-  ["Complete website setup","End-to-end website preparation from structure and design to technical configuration, deployment and basic operational readiness."],
-  ["Cumulative workforce-demand planning","Cumulative workforce-need tracking, KPI monitoring for operations in Hungary and reporting for the main partner, focused on capacity and fulfilment."],
-  ["Power BI connected to Microsoft SQL Server","Power BI reporting with direct Microsoft SQL Server connectivity, including data-source preparation, modelling and analytical outputs."]]},
- de:{k:"REFERENZEN & CASE STUDIES",h:"Lösungen für reale Geschäftsprozesse.",p:"Ausgewählte Projekte aus Produktion, Logistik, BI, Web und Mobile. Beschrieben wird der tatsächlich gelieferte Umfang statt erfundener Marketingkennzahlen.",partners:"Partner & Projekte",review:"Kundenstimmen werden nur nach Freigabe veröffentlicht. Daher zeigen wir hier den konkreten Umfang der realisierten Lösungen.",items:[
-  ["Produktionsplanung und Reporting","Power-BI-Planung, automatisierte Datenergänzung über Shell-Skripte, Dokumentation von Kamerapunkten im gesamten Objekt, Kontrollreporting und API-gestützte Berechnung des Mehlverbrauchs."],
-  ["Operative Planung innerhalb von 24 Stunden","Komplettes Planungstool auf Basis des Verbrauchs der Produktionslinien, Verpackungsverfolgung und Power-BI-Implementierung für operative und Management-Sichten."],
-  ["Palettenlogistik und Planung der Umpacklinie","Logistik der Palettenzufuhr, Kapazitäts- und Flussplanung der Umpacklinie sowie Entscheidungsunterstützung auf Basis von Betriebsdaten."],
-  ["Komplette Weblösung","Konzeption und Umsetzung der Website einschließlich Struktur, UI, Formulare, technische Konfiguration und Produktionsdeployment."],
-  ["Individuelle Flutter-App","Maßgeschneiderte mobile Flutter-Anwendung mit Fokus auf plattformübergreifende Nutzung, User Flow und zukünftige API- und Datenintegrationen."],
-  ["Integration des Altsystems Ecoray","Anbindung des bestehenden Ecoray-Systems und der Datenbank, automatische Datenübernahme und Transformation mit Power Query sowie Reporting-Datenfluss."],
-  ["Komplette Website-Einrichtung","Weblösung von Struktur und Design über technische Konfiguration bis Deployment und betriebliche Grundkonfiguration."],
-  ["Kumulative Personalbedarfsplanung","Kumulative Erfassung des Personalbedarfs, KPI-Monitoring für den Betrieb in Ungarn und Reporting für den Hauptpartner."],
-  ["Power BI mit Microsoft SQL Server","Power-BI-Reporting mit direkter SQL-Server-Anbindung einschließlich Datenquellen, Modell und analytischen Ausgaben."]]},
- pl:{k:"REFERENCJE & CASE STUDIES",h:"Rozwiązania oparte na realnych procesach.",p:"Wybrane realizacje z produkcji, logistyki, BI, web i aplikacji mobilnych. Opisujemy faktyczny zakres zamiast wymyślonych wskaźników marketingowych.",partners:"Partnerzy i realizacje",review:"Opinie tekstowe publikujemy dopiero po akceptacji klienta. Poniżej pokazujemy więc konkretny zakres wykonanych rozwiązań.",items:[
-  ["Planowanie produkcji i raportowanie","Planowanie w Power BI, automatyczne uzupełnianie danych skryptami shell, ewidencja punktów kamerowych w całym obiekcie, raporty kontrolne i obliczenia zużycia mąki przez API."],
-  ["Planowanie operacyjne w ciągu 24 godzin","Kompletne narzędzie planistyczne oparte na zużyciu linii produkcyjnych, śledzenie opakowań i wdrożenie Power BI dla operacji i kadry zarządzającej."],
-  ["Logistyka palet i planowanie linii przepakowania","Logistyka dowozu palet, planowanie przepustowości i przepływu linii przepakowania oraz wsparcie decyzji na podstawie danych operacyjnych."],
-  ["Kompletne rozwiązanie webowe","Projekt i realizacja serwisu wraz ze strukturą, UI, formularzami, konfiguracją techniczną i wdrożeniem produkcyjnym."],
-  ["Dedykowana aplikacja Flutter","Aplikacja mobilna Flutter na zamówienie, przygotowana do pracy wieloplatformowej oraz dalszych integracji API i danych."],
-  ["Integracja starszego systemu Ecoray","Połączenie z istniejącym Ecoray i bazą danych, automatyczne pobieranie i transformacja w Power Query oraz przygotowanie przepływu raportowego."],
-  ["Kompletna konfiguracja strony internetowej","Rozwiązanie od struktury i projektu przez konfigurację techniczną aż po wdrożenie i gotowość operacyjną."],
-  ["Kumulatywne planowanie zapotrzebowania na pracowników","Śledzenie skumulowanego zapotrzebowania na pracowników, KPI dla operacji na Węgrzech i raportowanie dla głównego partnera."],
-  ["Power BI z Microsoft SQL Server","Konfiguracja raportowania Power BI i bezpośrednie połączenie z Microsoft SQL Server wraz z modelem danych i analizami."]]},
- es:{k:"REFERENCIAS & CASOS",h:"Soluciones construidas sobre procesos reales.",p:"Proyectos seleccionados en fabricación, logística, BI, web y apps móviles. Se presenta el alcance entregado, no métricas de marketing inventadas.",partners:"Socios y proyectos",review:"Los testimonios escritos se publican solo con aprobación del cliente. Por eso mostramos el alcance concreto de los proyectos realizados.",items:[
-  ["Planificación de producción y reporting","Planificación en Power BI, carga automática mediante scripts shell, registro de puntos de cámaras en toda la instalación, reporting de control y cálculos de consumo de harina conectados por API."],
-  ["Planificación operativa en 24 horas","Herramienta completa basada en el consumo de las líneas de producción, seguimiento de embalajes e implementación de Power BI para operaciones y dirección."],
-  ["Logística de palés y planificación de la línea de reempaque","Logística de entrada de palés, planificación de capacidad y flujo de la línea de reempaque y soporte a decisiones con datos operativos."],
-  ["Solución web completa","Diseño y realización del sitio, estructura de contenidos, interfaz, formularios, configuración técnica y despliegue en producción."],
-  ["Aplicación Flutter a medida","App móvil Flutter personalizada, orientada al uso multiplataforma y preparada para futuras integraciones de API y datos."],
-  ["Integración con el sistema legado Ecoray","Conexión con Ecoray y su base de datos, extracción y transformación automática mediante Power Query y flujo de datos para reporting."],
-  ["Configuración completa del sitio web","Preparación integral desde estructura y diseño hasta configuración técnica, despliegue y preparación operativa básica."],
-  ["Planificación acumulativa de necesidades de personal","Seguimiento acumulado de necesidades de personal, KPI para operaciones en Hungría y reporting para el socio principal."],
-  ["Power BI conectado a Microsoft SQL Server","Reporting Power BI con conexión directa a Microsoft SQL Server, preparación de fuentes, modelo de datos y salidas analíticas."]]}
+type Study = {
+  name: string;
+  tag: string;
+  domain?: string;
+  website?: string;
+  publicLabel?: string;
+  title: string;
+  summary: string;
+  challenge: string;
+  solution: string[];
+  technologies: string[];
+  outcome: string;
 };
 
-export default function CaseStudies(){const {lang}=useLanguage();const x=copy[lang];return <section className="section references-section" id="referencie"><div className="wrap"><div className="section-heading references-heading"><div><div className="eyebrow dark"><span/>{x.k}</div><h2>{x.h}</h2></div><p>{x.p}</p></div><div className="partner-marquee" aria-label={x.partners}>{base.map(p=><span key={p.name}>{p.name}</span>)}</div><div className="reference-note"><span>✓</span><p>{x.review}</p></div><div className="case-grid">{base.map((p,i)=><article className={`case-card ${i===0||i===1?"case-card-featured":""}`} key={p.name}><div className="case-index">{String(i+1).padStart(2,"0")}</div><div className="case-brand">{p.name}</div><div className="case-tags">{p.tag}</div><h3>{x.items[i][0]}</h3><p>{x.items[i][1]}</p></article>)}</div></div></section>}
+const studies: Study[] = [
+  {
+    name:"FROST a.s.", tag:"Power BI · API · Automation", domain:"frost.sk", website:"https://www.frost.sk/sk",
+    title:"Plánovanie, výrobný reporting a automatizované dátové toky",
+    summary:"Power BI plánovanie, shell automatizácie, evidencia kamerových bodov a API výpočty spotreby múky.",
+    challenge:"Zjednotiť plánovanie, kontrolné dáta a prevádzkové výpočty do jedného použiteľného systému pre každodenné rozhodovanie.",
+    solution:["Nastavenie plánovania a manažérskych pohľadov v Power BI.","Automatizované dopĺňanie dát cez shell skripty.","Evidencia a zakresľovanie kamerových bodov v rámci objektu.","Kontrolný Power BI reporting pre prevádzkové kontroly.","Výpočty spotreby múky prepojené cez API."],
+    technologies:["Power BI","DAX","API","Shell","Automation"], outcome:"Výsledkom je prepojený reporting a plánovanie postavené na reálnych prevádzkových dátach, s menšou závislosťou od manuálneho spracovania."
+  },
+  {
+    name:"HOLLEN s.r.o.", tag:"Planning · Power BI · Operations", domain:"hollen.sk", website:"https://www.hollen.sk/",
+    title:"Operatívne plánovanie výroby do 24 hodín",
+    summary:"Kompletný plánovací nástroj podľa spotreby liniek, sledovanie obalov a Power BI implementácia.",
+    challenge:"Dostať plánovanie z manuálneho režimu do rýchleho nástroja, ktorý vie pracovať so spotrebou liniek a zásobami obalového materiálu.",
+    solution:["Návrh plánovacieho modelu na základe spotreby výrobných liniek.","Sledovanie obalového materiálu a jeho potreby.","Power BI vrstva pre operatívny a manažérsky pohľad.","Rýchly prototyp a nasadenie použiteľného plánovacieho nástroja."],
+    technologies:["Power BI","Excel","Power Query","Planning","Operations"], outcome:"Plánovanie bolo prenesené do nástroja, ktorý umožňuje rýchlejšie reagovať na aktuálnu spotrebu liniek a dostupnosť obalov."
+  },
+  {
+    name:"VEDOS", tag:"Logistics · Planning · Workflow", domain:"vedos.sk", website:"https://www.vedos.sk/",
+    title:"Logistika navážania paliet a plánovanie prebaľovacej linky",
+    summary:"Plánovanie logistického toku paliet, kapacity a prevádzky prebaľovacej linky.",
+    challenge:"Zvýšiť prehľad nad logistickým tokom a plánovaním linky tak, aby prevádzka mala jasný pohľad na potrebu paliet a kapacitu.",
+    solution:["Model logistického toku navážania paliet.","Plánovanie kapacity a vyťaženia prebaľovacej linky.","Prehľad prevádzkových údajov pre operatívne rozhodovanie."],
+    technologies:["Logistics","Planning","Data","Workflow"], outcome:"Vznikol ucelený pohľad na logistiku a plánovanie linky, ktorý podporuje operatívne rozhodovanie."
+  },
+  {
+    name:"BETONOVEPLOTY.eu", tag:"Web · UX · Deployment", domain:"betonoveploty.eu", website:"https://betonoveploty.eu/",
+    title:"Kompletné webové riešenie a produkčné nasadenie",
+    summary:"Kompletná webová prezentácia, štruktúra produktov, UX, formuláre a technické nasadenie.",
+    challenge:"Vytvoriť moderný web, ktorý prehľadne prezentuje široký sortiment a zároveň podporuje získavanie dopytov.",
+    solution:["Návrh informačnej architektúry a používateľského rozhrania.","Produktové kategórie a prezentačné stránky.","Kontaktné a dopytové formuláre.","Technické nastavenie a produkčné nasadenie."],
+    technologies:["Web","UX/UI","Next.js","SEO","Deployment"], outcome:"Výsledkom je moderná webová prezentácia pripravená na obchodné dopyty a ďalší rozvoj."
+  },
+  {
+    name:"TVOJBYT.sk", tag:"Flutter · Mobile · Custom App", domain:"tvojbyt.sk", website:"https://tvojbyt.sk/",
+    title:"Flutter aplikácia na mieru",
+    summary:"Mobilná aplikácia navrhnutá ako multiplatformové riešenie s priestorom pre ďalšie API integrácie.",
+    challenge:"Pripraviť mobilný produkt, ktorý dokáže rozšíriť existujúci online predaj o samostatný aplikačný kanál.",
+    solution:["Návrh používateľských tokov aplikácie.","Multiplatformový vývoj vo Flutteri.","Pripravenosť na napojenie API a dátových zdrojov.","Architektúra vhodná pre ďalší rozvoj Android/iOS."],
+    technologies:["Flutter","Dart","Android","iOS","API"], outcome:"Vznikol základ aplikácie na mieru s multiplatformovou architektúrou a možnosťou ďalšieho rozšírenia."
+  },
+  {
+    name:"H + EKO", tag:"Ecoray · Power Query · Legacy Integration", domain:"", website:"https://www.isoh.gov.sk/uvod/registre/register-spracovatelov.html", publicLabel:"Firemný profil",
+    title:"Prepojenie starého systému Ecoray s automatickým dátovým tokom",
+    summary:"Napojenie na existujúci systém Ecoray, databázu a automatizované Power Query spracovanie.",
+    challenge:"Sprístupniť dáta zo staršieho systému bez potreby ručného exportovania a prepisovania údajov.",
+    solution:["Analýza existujúceho systému Ecoray a databázy.","Napojenie na dostupné dátové zdroje.","Automatické načítanie a transformácia cez Power Query.","Príprava dát pre ďalší reporting a analytiku."],
+    technologies:["Ecoray","MS Access","Power Query","Excel","Legacy Integration"], outcome:"Starší systém bol zapojený do automatizovaného dátového toku, čím sa znížil podiel manuálnej práce pri príprave dát."
+  },
+  {
+    name:"DOBROTKA.online", tag:"Web · Deployment · Digital", domain:"dobrotka.site", website:"https://www.dobrotka.site/",
+    title:"Kompletné nastavenie webovej stránky",
+    summary:"Webové riešenie od štruktúry a dizajnu cez technickú konfiguráciu až po nasadenie.",
+    challenge:"Pripraviť jednoduchú, zrozumiteľnú a prevádzkovo použiteľnú online prezentáciu pre gastro prevádzku.",
+    solution:["Štruktúra obsahu a používateľský tok.","Responzívny webový dizajn.","Technická konfigurácia a publikovanie.","Príprava obsahu na každodenné používanie."],
+    technologies:["Web","Responsive UI","Deployment","Content"], outcome:"Vznikla kompaktná webová prezentácia pripravená na bežnú prevádzku a komunikáciu so zákazníkmi."
+  },
+  {
+    name:"QL INDUSTRIAL SERVICES", tag:"Workforce · KPI · Hungary", domain:"", website:"",
+    title:"Kumulatívne plánovanie potreby pracovníkov a KPI monitoring",
+    summary:"Sledovanie potreby pracovníkov, KPI v Maďarsku a reporting pre hlavného partnera.",
+    challenge:"Vytvoriť jasný pohľad na aktuálnu a budúcu potrebu pracovníkov naprieč prevádzkou a súčasne sledovať KPI voči hlavnému partnerovi.",
+    solution:["Kumulatívny model potreby pracovníkov.","KPI monitoring pre prevádzku v Maďarsku.","Prehľad kapacity, plnenia a operatívnych požiadaviek.","Reporting pripravený pre komunikáciu s hlavným partnerom."],
+    technologies:["Power BI","KPI","Workforce Planning","Operations"], outcome:"Riešenie poskytuje spoločný pohľad na personálnu kapacitu a výkonové ukazovatele pre operatívne riadenie."
+  },
+  {
+    name:"ARBOPARK", tag:"Power BI · MSSQL · Data Integration", domain:"", website:"",
+    title:"Power BI reporting priamo nad Microsoft SQL Server",
+    summary:"Priame prepojenie Power BI s MSSQL, dátový model a analytické výstupy.",
+    challenge:"Nahradiť fragmentované dátové pohľady jedným reportovacím riešením priamo nad databázou.",
+    solution:["Napojenie Power BI na Microsoft SQL Server.","Príprava dátových zdrojov a modelu.","Návrh analytických pohľadov a KPI.","Nastavenie obnovovania a ďalšej rozšíriteľnosti reportingu."],
+    technologies:["Power BI","Microsoft SQL Server","SQL","Data Modeling"], outcome:"Vznikla dátová vrstva a reporting priamo nad databázou, pripravený na ďalšie rozširovanie."
+  }
+];
+
+const labels:any={
+  sk:{k:"REFERENCIE & PRÍPADOVÉ ŠTÚDIE",h:"Riešenia postavené na reálnych procesoch.",p:"Vybrané realizácie naprieč výrobou, logistikou, BI, webom a mobilnými aplikáciami.",study:"Prípadová štúdia",web:"Web stránka",close:"Zavrieť",challenge:"Výzva",solution:"Riešenie",tech:"Technológie",outcome:"Výsledok",private:"Interné riešenie"},
+  cs:{k:"REFERENCE & PŘÍPADOVÉ STUDIE",h:"Řešení postavená na reálných procesech.",p:"Vybrané realizace napříč výrobou, logistikou, BI, webem a mobilními aplikacemi.",study:"Případová studie",web:"Web",close:"Zavřít",challenge:"Výzva",solution:"Řešení",tech:"Technologie",outcome:"Výsledek",private:"Interní řešení"},
+  en:{k:"REFERENCES & CASE STUDIES",h:"Solutions built around real processes.",p:"Selected work across manufacturing, logistics, BI, web and mobile applications.",study:"Case study",web:"Website",close:"Close",challenge:"Challenge",solution:"Solution",tech:"Technology",outcome:"Outcome",private:"Internal solution"},
+  de:{k:"REFERENZEN & CASE STUDIES",h:"Lösungen auf Basis realer Prozesse.",p:"Ausgewählte Projekte aus Produktion, Logistik, BI, Web und mobilen Anwendungen.",study:"Case Study",web:"Website",close:"Schließen",challenge:"Herausforderung",solution:"Lösung",tech:"Technologien",outcome:"Ergebnis",private:"Interne Lösung"},
+  pl:{k:"REFERENCJE & CASE STUDIES",h:"Rozwiązania oparte na realnych procesach.",p:"Wybrane realizacje z produkcji, logistyki, BI, webu i aplikacji mobilnych.",study:"Case study",web:"Strona",close:"Zamknij",challenge:"Wyzwanie",solution:"Rozwiązanie",tech:"Technologie",outcome:"Rezultat",private:"Rozwiązanie wewnętrzne"},
+  es:{k:"REFERENCIAS & CASOS DE ESTUDIO",h:"Soluciones basadas en procesos reales.",p:"Proyectos seleccionados en fabricación, logística, BI, web y aplicaciones móviles.",study:"Caso de estudio",web:"Web",close:"Cerrar",challenge:"Reto",solution:"Solución",tech:"Tecnologías",outcome:"Resultado",private:"Solución interna"}
+};
+
+export default function CaseStudies(){
+  const {lang}=useLanguage();
+  const t=labels[lang];
+  const [selected,setSelected]=useState<Study|null>(null);
+  useEffect(()=>{if(!selected)return;const onKey=(e:KeyboardEvent)=>{if(e.key==="Escape")setSelected(null)};document.body.style.overflow="hidden";window.addEventListener("keydown",onKey);return()=>{document.body.style.overflow="";window.removeEventListener("keydown",onKey)}},[selected]);
+
+  return <section className="section references-section" id="referencie">
+    <div className="wrap">
+      <div className="section-heading references-heading"><div><div className="eyebrow dark"><span/>{t.k}</div><h2>{t.h}</h2></div><p>{t.p}</p></div>
+      <div className="reference-logo-grid">
+        {studies.map((s,i)=><article className={`reference-company-card ${i===0?"featured":""}`} key={s.name}>
+          <div className="reference-company-head">
+            <div className="reference-logo-wrap">
+              {s.domain?<img src={`https://www.google.com/s2/favicons?domain=${s.domain}&sz=128`} alt="" className="reference-logo"/>:null}
+              <span className="reference-monogram">{s.name.replace(/[^A-Za-z0-9+]/g,"").slice(0,3).toUpperCase()}</span>
+            </div>
+            <div><strong>{s.name}</strong><small>{s.tag}</small></div>
+          </div>
+          <h3>{s.title}</h3><p>{s.summary}</p>
+          <div className="reference-card-actions">
+            <button type="button" className="case-study-button" onClick={()=>setSelected(s)}>{t.study}<span>↗</span></button>
+            {s.website?<a className="reference-web-link" href={s.website} target="_blank" rel="noreferrer">{s.publicLabel||t.web}<span>↗</span></a>:<span className="reference-private">{t.private}</span>}
+          </div>
+        </article>)}
+      </div>
+    </div>
+
+    {selected?<div className="case-modal-backdrop" role="presentation" onMouseDown={(e)=>{if(e.currentTarget===e.target)setSelected(null)}}>
+      <article className="case-modal" role="dialog" aria-modal="true" aria-label={selected.name}>
+        <button className="case-modal-close" type="button" onClick={()=>setSelected(null)} aria-label={t.close}>×</button>
+        <div className="case-modal-brand">
+          <div className="reference-logo-wrap large">{selected.domain?<img src={`https://www.google.com/s2/favicons?domain=${selected.domain}&sz=128`} alt="" className="reference-logo"/>:null}<span className="reference-monogram">{selected.name.replace(/[^A-Za-z0-9+]/g,"").slice(0,3).toUpperCase()}</span></div>
+          <div><span>{selected.tag}</span><h2>{selected.name}</h2></div>
+        </div>
+        <h3 className="case-modal-title">{selected.title}</h3>
+        <div className="case-modal-grid">
+          <section><small>{t.challenge}</small><p>{selected.challenge}</p></section>
+          <section><small>{t.solution}</small><ul>{selected.solution.map(x=><li key={x}>{x}</li>)}</ul></section>
+          <section><small>{t.tech}</small><div className="case-tech-list">{selected.technologies.map(x=><span key={x}>{x}</span>)}</div></section>
+          <section><small>{t.outcome}</small><p>{selected.outcome}</p></section>
+        </div>
+        <div className="case-modal-footer">
+          {selected.website?<a href={selected.website} target="_blank" rel="noreferrer" className="button button-primary">{selected.publicLabel||t.web} ↗</a>:null}
+          <button type="button" className="button case-close-button" onClick={()=>setSelected(null)}>{t.close}</button>
+        </div>
+      </article>
+    </div>:null}
+  </section>;
+}

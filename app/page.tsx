@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 import ContactForm from "@/components/ContactForm";
 import SiteNavigation from "@/components/SiteNavigation";
 import PriceCalculator from "@/components/PriceCalculator";
@@ -38,16 +40,41 @@ const copy:any={
 const serviceTitles:any={sk:["Power BI & reporting","Excel & Power Query","Tableau & vizualizácia","Python & automatizácia","SQL & databázy","Weby & webové aplikácie na mieru","AI, chatboty & vlastní AI agenti","Mobilné aplikácie & ľubovoľný kód"],cs:["Power BI & reporting","Excel & Power Query","Tableau & vizualizace","Python & automatizace","SQL & databáze","Weby & webové aplikace na míru","AI, chatboty & vlastní AI agenti","Mobilní aplikace & libovolný kód"],en:baseServices.map(x=>x[0]),de:["Power BI & Reporting","Excel & Power Query","Tableau & Visualisierung","Python & Automatisierung","SQL & Datenbanken","Websites & individuelle Web-Apps","AI, Chatbots & eigene AI Agents","Mobile Apps & individuelle Entwicklung"],pl:["Power BI & reporting","Excel & Power Query","Tableau & wizualizacja","Python & automatyzacja","SQL & bazy danych","Strony i aplikacje webowe na zamówienie","AI, chatboty i własne agenty AI","Aplikacje mobilne i kod na zamówienie"],es:["Power BI & reporting","Excel & Power Query","Tableau & visualización","Python & automatización","SQL & bases de datos","Webs y aplicaciones web a medida","IA, chatbots y agentes de IA propios","Apps móviles y desarrollo a medida"]};
 const tech=[["BI & reporting","Power BI","DAX","Power BI Service","Tableau","Excel","Power Query"],["Data & automation","Python","pandas","ETL / ELT","REST API","CSV / XML / JSON","Automation"],["Microsoft","Microsoft SQL Server","T-SQL","SSIS","MS Access","Excel","Power Platform"],["Oracle & SQL","Oracle Database","SQL","PL/SQL","Views","Stored Procedures","Data Modeling"],["Databases","PostgreSQL","MySQL","MariaDB","SQLite","ODBC / JDBC","Data integration"],["Web & backend","Next.js","React","TypeScript","Node.js","REST API","Web portals"],["AI & agents","AI API","LLM","RAG","Chatbots","AI Agents","Automated workflows"],["Apps & code","Flutter","Dart","Kotlin","Android","iOS","Python","JavaScript / TypeScript"]];
 
+// Text for the photo profile in all six existing website languages.
+const portraitCopy: Record<string, { eyebrow: string; position: string; cta: string; alt: string }> = {
+ sk: { eyebrow: "OSOBNÝ PRÍSTUP", position: "Web · AI · Dáta", cta: "Kontaktovať ma", alt: "Portrét Ing. Petra Tutku" },
+ cs: { eyebrow: "OSOBNÍ PŘÍSTUP", position: "Web · AI · Data", cta: "Kontaktovat mě", alt: "Portrét Ing. Petera Tutky" },
+ en: { eyebrow: "PERSONAL APPROACH", position: "Web · AI · Data", cta: "Let's connect", alt: "Portrait of Ing. Peter Tutka" },
+ de: { eyebrow: "PERSÖNLICHER KONTAKT", position: "Web · KI · Daten", cta: "Kontakt aufnehmen", alt: "Porträt von Ing. Peter Tutka" },
+ pl: { eyebrow: "OSOBISTE PODEJŚCIE", position: "Web · AI · Dane", cta: "Skontaktuj się", alt: "Portret Ing. Petera Tutki" },
+ es: { eyebrow: "ATENCIÓN PERSONAL", position: "Web · IA · Datos", cta: "Contactar", alt: "Retrato de Ing. Peter Tutka" },
+};
+
 function IconArrow(){return <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>};
 function IconData(){return <svg viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="5" rx="7" ry="3"/><path d="M5 5v6c0 1.7 3.1 3 7 3s7-1.3 7-3V5M5 11v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6"/></svg>};
 function IconChart(){return <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>};
 function IconCode(){return <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 9-4 3 4 3M16 9l4 3-4 3M14 5l-4 14"/></svg>};
 
-export default function Home(){const {lang}=useLanguage();const t=copy[lang];const services=serviceTitles[lang].map((title:string,i:number)=>({number:String(i+1).padStart(2,"0"),title,text:t.serviceTexts[i],tags:baseServices[i][1]}));
+export default function Home(){const {lang}=useLanguage();const t=copy[lang] ?? copy.sk;const portrait=portraitCopy[lang] ?? portraitCopy.sk;const services=serviceTitles[lang].map((title:string,i:number)=>({number:String(i+1).padStart(2,"0"),title,text:t.serviceTexts[i],tags:baseServices[i][1]}));
  return <main>
-  <SiteNavigation/>
+  {/* Keep the existing navigation, language switcher and their behaviour.
+      Only the positioning is repaired by the CSS below. */}
+  <div className="tutka-navigation-frame"><SiteNavigation/></div>
   <section className="hero" id="top"><div className="hero-glow hero-glow-one"/><div className="hero-glow hero-glow-two"/><div className="hero-content wrap"><div className="hero-copy"><div className="eyebrow"><span/>{t.heroK}</div><h1><span>{t.hero1}</span><span>{t.hero2} <em>{t.heroEm}</em></span></h1><p className="hero-lead">{t.lead}</p><div className="hero-actions"><a className="button button-primary" href="#kontakt">{t.quote}<IconArrow/></a><a className="button button-secondary" href="#sluzby">{t.see}</a></div><div className="hero-pills">{["Web / Next.js","AI Agents","Chatbots","Python","Kotlin","Power BI","SQL","Flutter"].map(x=><span key={x}>{x}</span>)}</div></div>
-  <div className="dashboard-shell"><div className="window-bar"><span/><span/><span/><b>Executive overview</b></div><div className="dash-grid"><div className="metric metric-accent"><small>{t.revenue}</small><strong>€ 842k</strong><span>↗ 12.4 %</span></div><div className="metric"><small>{t.margin}</small><strong>31.8 %</strong><span>{t.target}</span></div><div className="metric"><small>{t.orders}</small><strong>1 286</strong><span>{t.period}</span></div><div className="chart-card"><div className="chart-title"><b>{t.performance}</b><span>{t.months}</span></div><svg className="line-chart" viewBox="0 0 520 180"><defs><linearGradient id="area" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor="#60e6d2" stopOpacity=".30"/><stop offset="1" stopColor="#60e6d2" stopOpacity="0"/></linearGradient></defs><path className="gridline" d="M0 40H520M0 90H520M0 140H520"/><path className="area" d="M0 150 C50 130 70 138 110 110 S175 125 210 88 S280 100 315 72 S380 85 420 45 S480 55 520 25 L520 180 L0 180Z"/><path className="line" d="M0 150 C50 130 70 138 110 110 S175 125 210 88 S280 100 315 72 S380 85 420 45 S480 55 520 25"/></svg></div><div className="source-card"><span className="source-icon"><IconData/></span><div><small>{t.sources}</small><b>SQL • Oracle • Excel • API</b></div><i>LIVE</i></div></div></div></div></section>
+  <div className="hero-visual">
+    <a className="hero-profile-card" href="#kontakt" aria-label={`${portrait.cta} – Ing. Peter Tutka`}>
+      <span className="hero-profile-photo">
+        <Image src="/images/peter-tutka.webp" alt={portrait.alt} width={277} height={592}
+          sizes="(max-width: 480px) 100px, 124px" priority />
+      </span>
+      <span className="hero-profile-information">
+        <span className="hero-profile-eyebrow"><span className="hero-profile-dot"/>{portrait.eyebrow}</span>
+        <strong>Ing. Peter Tutka</strong>
+        <span className="hero-profile-position">{portrait.position}</span>
+        <span className="hero-profile-link">{portrait.cta}<IconArrow/></span>
+      </span>
+    </a>
+    <div className="dashboard-shell"><div className="window-bar"><span/><span/><span/><b>Executive overview</b></div><div className="dash-grid"><div className="metric metric-accent"><small>{t.revenue}</small><strong>€ 842k</strong><span>↗ 12.4 %</span></div><div className="metric"><small>{t.margin}</small><strong>31.8 %</strong><span>{t.target}</span></div><div className="metric"><small>{t.orders}</small><strong>1 286</strong><span>{t.period}</span></div><div className="chart-card"><div className="chart-title"><b>{t.performance}</b><span>{t.months}</span></div><svg className="line-chart" viewBox="0 0 520 180"><defs><linearGradient id="area" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor="#60e6d2" stopOpacity=".30"/><stop offset="1" stopColor="#60e6d2" stopOpacity="0"/></linearGradient></defs><path className="gridline" d="M0 40H520M0 90H520M0 140H520"/><path className="area" d="M0 150 C50 130 70 138 110 110 S175 125 210 88 S280 100 315 72 S380 85 420 45 S480 55 520 25 L520 180 L0 180Z"/><path className="line" d="M0 150 C50 130 70 138 110 110 S175 125 210 88 S280 100 315 72 S380 85 420 45 S480 55 520 25"/></svg></div><div className="source-card"><span className="source-icon"><IconData/></span><div><small>{t.sources}</small><b>SQL • Oracle • Excel • API</b></div><i>LIVE</i></div></div></div></div></div></section>
   <section className="trust-strip"><div className="wrap trust-grid">{t.trust.map((x:any,i:number)=><div key={x[0]}>{i===0?<IconChart/>:i===1?<IconData/>:<IconCode/>}<span><strong>{x[0]}</strong><small>{x[1]}</small></span></div>)}</div></section>
   <section className="section wrap" id="sluzby"><div className="section-heading services-heading"><div><div className="eyebrow dark"><span/>{t.expertise}</div><h2>{t.servicesH}<br/><em>{t.servicesEm}</em></h2></div><div className="services-intro"><p>{t.servicesIntro}</p><a className="services-cta" href="#kontakt">{t.discuss}<IconArrow/></a></div></div><div className="services-grid">{services.map((s:any,i:number)=><article className={`service-card ${i===6?"service-card-featured":""}`} key={s.number}><div className="service-card-top"><div className="service-number">{s.number}</div><span className="service-dot"/></div><div className="service-card-copy"><h3>{s.title}</h3><p>{s.text}</p></div><div className="service-card-bottom"><div className="tag-row">{s.tags.map((tag:string)=><span key={tag}>{tag}</span>)}</div><span className="service-arrow"><IconArrow/></span></div></article>)}</div></section>
   <CaseStudies/>
@@ -58,4 +85,219 @@ export default function Home(){const {lang}=useLanguage();const t=copy[lang];con
   <section className="section wrap architecture-section" id="architektura"><div className="architecture-copy"><div className="eyebrow dark"><span/>{t.arch}</div><h2>{t.archH}</h2><p>{t.archP}</p></div><div className="architecture-flow"><div className="arch-node"><small>{t.input}</small><b>Web • ERP • API • {t.docs}</b></div><span>→</span><div className="arch-node active"><small>{t.logic}</small><b>Backend • SQL • Python</b></div><span>→</span><div className="arch-node"><small>{t.ai}</small><b>LLM • RAG • AI Agent</b></div><span>→</span><div className="arch-node"><small>{t.output}</small><b>Web • BI • Android • iOS</b></div></div></section>
   <section className="contact-section" id="kontakt"><div className="wrap contact-layout"><div className="contact-copy"><div className="eyebrow"><span/>{t.contact}</div><h2>{t.contactH}</h2><p>{t.contactP}</p><div className="quote-promise"><strong>{t.promise}</strong><span>{t.promise2}</span></div><div className="contact-note"><strong>tutka.peter@gmail.com</strong><span>Web • AI • AI Agents • Bots • Automation • Data • Mobile • Custom Software</span></div></div><ContactForm/></div></section>
   <footer><div className="wrap footer-row"><div className="brand brand-footer"><span className="brand-mark">T</span><span className="brand-copy"><strong>TUTKA</strong><small>DATA &amp; APPS</small></span></div><p>© 2026 TUTKA. {t.rights}</p><div><a href="/ochrana-osobnych-udajov">{t.privacy}</a><a href="#top">{t.up}</a></div></div></footer>
+
+  {/* The layout CSS is intentionally colocated here, because the separate
+      SiteNavigation component and global stylesheet were not provided. */}
+  <style jsx global>{`
+    /* A viewport-centred frame fixes navigation escaping to the left. */
+    .tutka-navigation-frame {
+      position: fixed !important;
+      top: clamp(12px, 1.8vw, 30px);
+      right: 0;
+      left: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 100vw;
+      padding-inline: 16px;
+      pointer-events: none;
+    }
+    .tutka-navigation-frame > * {
+      pointer-events: auto;
+      flex: 0 1 auto;
+      max-width: 100%;
+      box-sizing: border-box;
+    }
+    /* The original SiteNavigation may use left:0 or fixed positioning.
+       Neutralise this only on its outermost rendered element. */
+    .tutka-navigation-frame > :first-child {
+      position: relative !important;
+      top: auto !important;
+      right: auto !important;
+      bottom: auto !important;
+      left: auto !important;
+      margin-inline: auto !important;
+      transform: none !important;
+    }
+    @media (min-width: 1025px) {
+      .tutka-navigation-frame > :first-child {
+        width: max-content !important;
+        max-width: min(100%, 1360px) !important;
+      }
+      .tutka-navigation-frame > :first-child > :is(header, nav) {
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        right: auto !important;
+        width: max-content !important;
+        max-width: 100% !important;
+        margin-inline: auto !important;
+        transform: none !important;
+      }
+    }
+    /* Keep the original two-column hero and analytics dashboard intact. */
+    .hero-content .hero-visual {
+      position: relative;
+      isolation: isolate;
+      min-width: 0;
+      max-width: 100%;
+      align-self: center;
+    }
+    .hero-visual > .dashboard-shell { width: 100%; max-width: 100%; min-width: 0; }
+    .hero-visual .dash-grid { min-width: 0; }
+    /* Floating personal card – deliberately above, not over KPI/data cards. */
+    .hero-profile-card {
+      position: absolute;
+      z-index: 8;
+      top: -190px;
+      right: 14px;
+      width: min(340px, 90%);
+      min-height: 168px;
+      display: grid;
+      grid-template-columns: 118px minmax(0, 1fr);
+      align-items: stretch;
+      gap: 14px;
+      padding: 9px 15px 9px 9px;
+      overflow: hidden;
+      border: 1px solid rgba(147, 177, 207, .23);
+      border-radius: 23px;
+      background: linear-gradient(135deg, rgba(19, 37, 56, .97), rgba(9, 23, 40, .96));
+      box-shadow: 0 24px 65px rgba(0, 0, 0, .32), inset 0 1px 0 rgba(255, 255, 255, .06);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      text-decoration: none;
+      color: #fff;
+      transition: border-color .25s ease, box-shadow .25s ease, transform .25s ease;
+    }
+    .hero-profile-card:hover, .hero-profile-card:focus-visible {
+      border-color: rgba(108, 241, 223, .72);
+      box-shadow: 0 25px 65px rgba(0, 0, 0, .35), 0 0 0 1px rgba(108, 241, 223, .13);
+      transform: translateY(-3px);
+    }
+    .hero-profile-card:focus-visible { outline: 2px solid #80f5e5; outline-offset: 3px; }
+    .hero-profile-photo {
+      position: relative;
+      display: block;
+      overflow: hidden;
+      min-height: 150px;
+      border-radius: 15px;
+      background: #171e27;
+    }
+    .hero-profile-photo img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      inset: 0;
+      object-fit: cover;
+      object-position: center 21%;
+    }
+    .hero-profile-information {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      min-width: 0;
+      gap: 8px;
+    }
+    .hero-profile-eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      color: #99afc5;
+      font-size: 9px;
+      line-height: 1.5;
+      font-weight: 750;
+      letter-spacing: .125em;
+      text-transform: uppercase;
+    }
+    .hero-profile-dot { flex: none; width: 6px; height: 6px; border-radius: 50%; background: #69ebd9; box-shadow: 0 0 13px rgba(105, 235, 217, .6); }
+    .hero-profile-information > strong {
+      display: block;
+      color: #fff;
+      font-size: clamp(16px, 1.4vw, 19px);
+      line-height: 1.15;
+      letter-spacing: -.025em;
+      font-weight: 800;
+    }
+    .hero-profile-position { color: #a6bacd; font-size: 12px; line-height: 1.5; }
+    .hero-profile-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      margin-top: 2px;
+      color: #88f3e2;
+      font-size: 11px;
+      line-height: 1.3;
+      font-weight: 800;
+    }
+    .hero-profile-link svg { width: 15px; height: 15px; stroke: currentColor; stroke-width: 1.8; fill: none; }
+    /* Tablet/mobile: stack the existing content and move the portrait into
+       normal document flow so neither the photo nor the KPIs are obscured. */
+    @media (max-width: 1180px) {
+      .hero-content.wrap {
+        display: grid !important;
+        grid-template-columns: minmax(0, 1fr) !important;
+        gap: clamp(34px, 6vw, 58px) !important;
+      }
+      .hero-content .hero-copy, .hero-content .hero-visual { min-width: 0; width: 100%; }
+      .hero-content .hero-visual { display: flex; flex-direction: column; gap: 22px; }
+      .hero-visual .hero-profile-card {
+        position: relative;
+        top: auto;
+        right: auto;
+        width: min(100%, 390px);
+        max-width: 100%;
+        flex: 0 0 auto;
+      }
+      .hero-visual > .dashboard-shell { width: 100%; }
+    }
+    @media (max-width: 760px) {
+      .tutka-navigation-frame { top: 10px; padding-inline: 10px; }
+      .tutka-navigation-frame > :first-child { max-width: 100% !important; }
+      .hero-content .hero-copy h1 {
+        font-size: clamp(2.7rem, 9.8vw, 4.8rem) !important;
+        line-height: .99 !important;
+        letter-spacing: -.058em !important;
+        overflow-wrap: anywhere;
+      }
+      .hero-content .hero-copy .hero-lead {
+        font-size: clamp(1rem, 2.5vw, 1.15rem) !important;
+        line-height: 1.7;
+      }
+      .hero-content .hero-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+      .hero-content .hero-actions .button { max-width: 100%; justify-content: center; }
+      .hero-content .hero-pills { display: flex; flex-wrap: wrap; gap: 8px; }
+      .hero-visual .dash-grid { min-width: 0; }
+      .hero-visual .metric { min-width: 0; }
+      .hero-visual .metric strong { font-size: clamp(1.05rem, 4vw, 1.65rem); }
+      .hero-visual .metric small { font-size: 9px; }
+      .hero-visual .metric span { font-size: 10px; }
+      .hero-visual .line-chart { display: block; width: 100%; height: auto; }
+    }
+    @media (max-width: 440px) {
+      .hero-visual .hero-profile-card {
+        grid-template-columns: 96px minmax(0, 1fr);
+        min-height: 146px;
+        gap: 12px;
+        padding: 8px 12px 8px 8px;
+        border-radius: 18px;
+      }
+      .hero-visual .hero-profile-photo { min-height: 128px; border-radius: 12px; }
+      .hero-profile-eyebrow { font-size: 8px; }
+      .hero-profile-information > strong { font-size: 16px; }
+      .hero-profile-position { font-size: 11px; }
+      .hero-visual .dash-grid { gap: 8px; }
+      .hero-visual .metric { padding: 12px 9px; }
+      .hero-visual .metric strong { font-size: 1.02rem; }
+      .hero-visual .window-bar b { font-size: 10px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .hero-profile-card { transition: none; }
+      .hero-profile-card:hover { transform: none; }
+    }
+  `}</style>
  </main>}

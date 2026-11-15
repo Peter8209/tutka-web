@@ -48,7 +48,7 @@ export async function POST(req: Request) {
     if(verified.success!==true || verified.action!=='tutka-lead' || verified.hostname!==u.hostname || !hostnames.includes(verified.hostname))return fail(403);
     const date=new Date().toISOString();
     const t=leadCopy[lang];
-    const text=[contact?'NOVÝ LEAD – vyžiadaný jednorazový kontakt':'REGISTRÁCIA – nekontaktovať na marketing',`E-mail (neoverený): ${email}`,`Telefón (neoverený): ${phone}`,`Dátum UTC: ${date}`,`Jazyk: ${lang}`,`Režim: ${mode}`,`Kontakt vyžiadaný: ${contact?'ÁNO':'NIE'}`,'Newsletter: NIE','Verzia formulára: 2026-11-15 REV05 SMTP',`Text formulára: ${mode==='required'?t.required:t.optional}`,`Text voľby: ${mode==='required'?t.contact:t.submit}`].join('\n');
+    const text=[contact?'NOVÝ LEAD – vyžiadaný jednorazový kontakt':'REGISTRÁCIA – nekontaktovať na marketing',`E-mail (neoverený): ${email}`,`Telefón (neoverený): ${phone}`,`Dátum UTC: ${date}`,`Jazyk: ${lang}`,`Režim: ${mode}`,`Kontakt vyžiadaný: ${contact?'ÁNO':'NIE'}`,'Newsletter: NIE','Verzia formulára: 2026-11-15 REV06 multilingual SMTP',`Text formulára: ${mode==='required'?t.required:t.optional}`,`Text voľby: ${mode==='required'?t.contact:t.submit}`].join('\n');
     // Only server-controlled addresses are used for SMTP envelope and headers.
     stage = 'SMTP';
     const transport = nodemailer.createTransport({

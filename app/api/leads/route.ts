@@ -10,7 +10,7 @@ const fail = (status: number) => NextResponse.json({ok:false}, {status, headers:
 const unavailable = (reason: string) => { console.error('[tutka-leads]', reason); return fail(503); };
 // Log fixed categories only: never log credentials, visitor data, or provider error objects.
 export async function POST(req: Request) {
-  const mode = process.env.NEXT_PUBLIC_LEAD_MODE || 'optional';
+  const mode = process.env.NEXT_PUBLIC_LEAD_MODE || 'required';
   if (!['optional','required'].includes(mode)) return fail(404);
   const hostnames = (process.env.LEAD_HOSTNAMES || 'www.tutka.sk,tutka.sk').split(',').map(x=>x.trim().toLowerCase()).filter(Boolean);
   const secret = process.env.TURNSTILE_SECRET_KEY;
@@ -48,7 +48,7 @@ export async function POST(req: Request) {
     if(verified.success!==true || verified.action!=='tutka-lead' || verified.hostname!==u.hostname || !hostnames.includes(verified.hostname))return fail(403);
     const date=new Date().toISOString();
     const t=leadCopy[lang];
-    const text=[contact?'NOVÝ LEAD – vyžiadaný jednorazový kontakt':'REGISTRÁCIA – nekontaktovať na marketing',`E-mail (neoverený): ${email}`,`Telefón (neoverený): ${phone}`,`Dátum UTC: ${date}`,`Jazyk: ${lang}`,`Režim: ${mode}`,`Kontakt vyžiadaný: ${contact?'ÁNO':'NIE'}`,'Newsletter: NIE','Verzia formulára: 2026-11-15 REV04 SMTP',`Text formulára: ${mode==='required'?t.required:t.optional}`,`Text voľby: ${mode==='required'?t.contact:t.submit}`].join('\n');
+    const text=[contact?'NOVÝ LEAD – vyžiadaný jednorazový kontakt':'REGISTRÁCIA – nekontaktovať na marketing',`E-mail (neoverený): ${email}`,`Telefón (neoverený): ${phone}`,`Dátum UTC: ${date}`,`Jazyk: ${lang}`,`Režim: ${mode}`,`Kontakt vyžiadaný: ${contact?'ÁNO':'NIE'}`,'Newsletter: NIE','Verzia formulára: 2026-11-15 REV05 SMTP',`Text formulára: ${mode==='required'?t.required:t.optional}`,`Text voľby: ${mode==='required'?t.contact:t.submit}`].join('\n');
     // Only server-controlled addresses are used for SMTP envelope and headers.
     stage = 'SMTP';
     const transport = nodemailer.createTransport({

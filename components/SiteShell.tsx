@@ -11,7 +11,7 @@ import LeadGateway from "./leads/LeadGateway";
 export default function SiteShell({ children }: { children: ReactNode }) {
   const { lang } = useLanguage();
   const pathname = usePathname();
-  const isLegal = Object.values(paths).some(path => path === pathname);
+  const isLegal = Object.values(paths).some(path => path === pathname?.replace(/\/$/, ""));
   const [routeLang, setRouteLang] = useState<LegalLang>("sk");
   useEffect(() => {
     if (!isLegal) return;
@@ -25,10 +25,11 @@ export default function SiteShell({ children }: { children: ReactNode }) {
     document.documentElement.lang = activeLang === "cz" ? "cs" : activeLang;
   }, [activeLang]);
   return (
-    <CookieConsentProvider lang={activeLang}>
-      {children}
-      <Footer lang={activeLang} />
-      <LeadGateway lang={activeLang} exempt={isLegal || !!pathname?.startsWith("/api/")} />
-    </CookieConsentProvider>
+    <LeadGateway lang={activeLang} exempt={isLegal || !!pathname?.startsWith("/api/")}>
+      <CookieConsentProvider lang={activeLang}>
+        {children}
+        <Footer lang={activeLang} />
+      </CookieConsentProvider>
+    </LeadGateway>
   );
 }

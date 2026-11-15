@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { LanguageProvider } from "@/components/LanguageProvider";
+import SiteShell from "@/components/SiteShell";
+import "@/components/legal/legal.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.tutka.sk"),
@@ -40,7 +42,6 @@ export const metadata: Metadata = {
     "automatizácia",
     "Slovensko"
   ],
-  alternates: { canonical: "/" },
   openGraph: {
     type: "website",
     locale: "sk_SK",
@@ -60,7 +61,9 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="sk">
-      <body><LanguageProvider>{children}</LanguageProvider></body>
+      <body>
+        <LanguageProvider><SiteShell>{children}</SiteShell></LanguageProvider>
+      </body>
     </html>
   );
 }

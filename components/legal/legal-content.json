@@ -1,0 +1,614 @@
+{
+  "sk": {
+    "termsTitle": "Všeobecné obchodné podmienky",
+    "privacyTitle": "Ochrana osobných údajov (GDPR)",
+    "back": "Späť na tutka.sk",
+    "draft": "Návrh – pred publikovaním doplňte identifikačné údaje a overte technické spracúvanie.",
+    "notice": "Beriem na vedomie informácie o spracúvaní osobných údajov. Odoslaním dopytu nevzniká objednávka ani záväzok.",
+    "identity": "Identifikácia poskytovateľa a prevádzkovateľa",
+    "withdrawalTitle": "Vzor oznámenia o odstúpení",
+    "withdrawalText": "Oznamujem, že odstupujem od zmluvy o poskytnutí služby: …; objednaná dňa: …; meno a priezvisko: …; adresa: …; dátum: …; podpis (iba pri listinnom podaní): ….",
+    "terms": [
+      {
+        "title": "1. Rozsah a zmluvné strany",
+        "body": "Tieto podmienky upravujú poskytovanie služieb pod značkou TUTKA prostredníctvom tutka.sk. Klientom je podnikateľ alebo spotrebiteľ (fyzická osoba konajúca mimo podnikania či povolania). Individuálna zmluva má prednosť v rozsahu, v akom to zákon pripúšťa. Povinné práva spotrebiteľa zostávajú zachované."
+      },
+      {
+        "title": "2. Predmet služieb",
+        "body": "Služby zahŕňajú návrh, vývoj, testovanie a nasadenie webov a aplikácií, AI agentov a chatbotov, softvéru, automatizácií, dátových integrácií, databáz, BI a konzultácie. Konkrétny rozsah, výstupy, kompatibilita, termíny, podpora a požiadavky na infraštruktúru sa určia v ponuke alebo zmluve."
+      },
+      {
+        "title": "3. Uzavretie zmluvy",
+        "body": "Kontaktný formulár a kalkulačka slúžia na nezáväzný dopyt. Zmluva vzniká prijatím záväznej ponuky podľa jej podmienok alebo podpisom zmluvy. Pred uzavretím spotrebiteľ dostane celkovú cenu, podmienky plnenia, informácie o odstúpení a ostatné povinné informácie; potvrdenie zmluvy dostane na trvanlivom médiu (napr. e-mail). Jazyk zmluvy sa dohodne individuálne."
+      },
+      {
+        "title": "4. Cena a platby",
+        "body": "Online sadzby a kalkulácie sú orientačné. Fixná alebo hodinová cena, DPH podľa daňového režimu, splatnosť a prípadná záloha sa dohodnú pred začiatkom plnenia. Spotrebiteľovi sa oznámi celková cena vrátane daní a známych poplatkov, prípadne spôsob jej výpočtu. Licencie, domény, hosting, cloud, AI API a iné externé náklady sa účtujú iba podľa vopred odsúhlasených podmienok. Zmeny rozsahu vyžadujú dohodu o cene a termíne. Pri omeškaní sa postupuje podľa zmluvy a zákona; záloha nie je automaticky nevratná."
+      },
+      {
+        "title": "5. Realizácia a odovzdanie",
+        "body": "Klient poskytne potrebné podklady a oprávnené prístupy. Pri prekážkach sa strany dohodnú na úprave harmonogramu. Odovzdanie sa uskutoční dohodnutým spôsobom, vrátane testovania a dokumentácie, ak boli objednané. Klient môže oznámiť vady; prevzatie neodníma zákonné práva. Údržba, aktualizácie a SLA sa dohodnú samostatne, okrem povinností vyplývajúcich zo zákona."
+      },
+      {
+        "title": "6. Autorské práva a licencie",
+        "body": "Rozsah oprávnení k výstupom, zdrojovému kódu, dizajnu a databázam, odovzdanie repozitára, výhradnosť, územie, čas a prípadné sublicencie sa výslovne určia v zmluve. Strany môžu dohodnúť vznik licencie po úplnom zaplatení, pokiaľ je to právne prípustné. Režim softvéru a databáz na objednávku sa riadi aj § 90 a § 91 Autorského zákona. Existujúce komponenty a open-source alebo cudzie prvky podliehajú vlastným licenciám. Klient musí mať oprávnenia k dodaným podkladom. Zverejnenie dôverných referencií a klientskych údajov vyžaduje príslušné oprávnenie."
+      },
+      {
+        "title": "7. Dôvernosť a údaje",
+        "body": "Strany chránia dôverné informácie a používajú prístupy iba na dohodnuté účely. Ak poskytovateľ spracúva osobné údaje v mene klienta, pred spracúvaním uzavrú zmluvu podľa čl. 28 GDPR. Prístupové údaje sa odovzdávajú bezpečným kanálom. Pravidlá zálohovania, vrátenia či vymazania údajov a bezpečnosti projektu sa dohodnú podľa rozsahu služby."
+      },
+      {
+        "title": "8. AI a externé platformy",
+        "body": "Výstupy AI môžu obsahovať chyby a vyžadujú primerané ľudské overenie. Podmienky používania, dátové toky, modely, prevádzkové náklady a zodpovednosť za kontrolu sa určia podľa projektu. Zmeny API alebo výpadky tretích strán sa riešia podľa zmluvy a zákona; nezbavujú poskytovateľa zodpovednosti za jeho vlastné povinnosti. Výsledky ako tržby, SEO poradie či návratnosť investície nie sú garantované bez výslovnej dohody."
+      },
+      {
+        "title": "9. Vady a zodpovednosť",
+        "body": "Vadu oznámte e-mailom alebo na adrese poskytovateľa s opisom a dostupnými podkladmi. Spotrebiteľ dostane potvrdenie a informáciu o lehote nápravy podľa príslušných predpisov. Zákonné nároky, vrátane práv pri vadnom digitálnom plnení a povinných aktualizácií, nie sú obmedzené. Poskytovateľ zodpovedá za porušenie svojich povinností podľa zákona; prípadné osobitné B2B limity sa dohodnú individuálne len v zákonnom rozsahu."
+      },
+      {
+        "title": "10. Odstúpenie spotrebiteľa",
+        "body": "Pri zmluve o službe alebo digitálnom obsahu bez hmotného nosiča uzavretej na diaľku môže spotrebiteľ spravidla odstúpiť bez dôvodu do 14 dní od uzavretia. Oznámenie možno poslať e-mailom alebo poštou pred uplynutím lehoty; použiť možno aj nižšie uvedený vzor. Ak spotrebiteľ výslovne požiada o začatie služby počas lehoty a následne odstúpi, uhradí pomernú cenu skutočne poskytnutého plnenia, ak sú splnené zákonné podmienky. Pri úplne poskytnutej platenej službe právo zaniká len pri splnení podmienok zákona vrátane predchádzajúceho výslovného súhlasu a poučenia. Pri platenom digitálnom obsahu bez hmotného nosiča môže právo zaniknúť začatím dodávania len s predchádzajúcim výslovným súhlasom, potvrdením vedomia straty práva a zákonným potvrdením zmluvy. Samotný vývoj na mieru automaticky nevylučuje odstúpenie. Platby sa vracajú do 14 dní od doručenia odstúpenia v zákonnom rozsahu a rovnakým spôsobom, ak sa bez poplatku nedohodne inak. Pri zmluve uzavretej cez online rozhranie bude dostupná zákonom vyžadovaná funkcia odstúpenia. Pri nevyžiadanej návšteve alebo predajnej akcii môže platiť 30-dňová lehota."
+      },
+      {
+        "title": "11. Riešenie sporov",
+        "body": "Spotrebiteľ môže požiadať poskytovateľa o nápravu. Pri zamietnutí alebo bez odpovede do 30 dní môže za zákonných podmienok podať návrh na alternatívne riešenie sporu, napr. Slovenskej obchodnej inšpekcii (www.soi.sk), spravidla do jedného roka. SOI môže odmietnuť spor s vyčísliteľnou hodnotou najviac 20 EUR. Právo obrátiť sa na súd zostáva zachované."
+      },
+      {
+        "title": "12. Rozhodné právo a zmeny",
+        "body": "Vzťahy sa riadia slovenským právom, bez toho, aby spotrebiteľ stratil povinnú ochranu podľa práva, ktoré by sa uplatnilo bez tejto voľby, alebo zákonnú súdnu príslušnosť. Nové znenie podmienok sa použije na budúce zmluvy; existujúce zmluvy sa nemenia jednostranne mimo zákonných alebo dohodnutých podmienok."
+      }
+    ],
+    "privacy": [
+      {
+        "title": "1. Kto spracúva údaje",
+        "body": "Prevádzkovateľ uvedený v identifikácii spracúva údaje pri návšteve tutka.sk a pri komunikácii, príprave ponúk a plnení zmlúv. Uplatňuje GDPR (EÚ 2016/679) a zákon č. 18/2018 Z. z. Žiadosti o ochranu údajov posielajte na kontaktný e-mail. Kontakt zodpovednej osoby, ak je určená, sa uvedie v identifikácii."
+      },
+      {
+        "title": "2. Údaje a zdroje",
+        "body": "Spracúvame meno, e-mail, telefón, firmu, zadanie, rozpočet, termín, korešpondenciu a údaje o zmluve a fakturácii, ktoré nám poskytnete. Technické údaje (napr. IP adresa, čas požiadavky, prehliadač a bezpečnostné logy) môžu vznikať pri návšteve webu. Údaje získavame od vás a z technickej prevádzky. Neposielajte citlivé údaje ani heslá bežným formulárom. Pri údajoch získaných od iných osôb sa splní čl. 14 GDPR, ak sa uplatňuje."
+      },
+      {
+        "title": "3. Účely a právne základy",
+        "body": "Dopyt fyzickej osoby, ponuka a zmluva: čl. 6 ods. 1 písm. b) GDPR (predzmluvné kroky na žiadosť osoby a plnenie zmluvy). Komunikácia so zástupcami firiem, bezpečnosť a ochrana právnych nárokov: písm. f), oprávnený záujem na obchodnej komunikácii, bezpečnosti a ochrane práv. Fakturácia, účtovníctvo a plnenie zákonných povinností: písm. c). Ak sa zavedie voliteľná analytika alebo marketing založený na súhlase, použije sa písm. a) a súhlas možno kedykoľvek odvolať. Dopyt nie je podmienený marketingovým súhlasom."
+      },
+      {
+        "title": "4. Doba uchovávania",
+        "body": "Navrhovaný režim: neúspešné dopyty najviac 12 mesiacov od poslednej komunikácie; technické záznamy najviac 90 dní, ak incident nevyžaduje dlhšiu ochranu; zmluvné údaje počas plnenia a následne po dobu potrebnú na ochranu práv, najmä počas príslušných premlčacích lehôt. Účtovné doklady sa uchovávajú spravidla 10 rokov po roku, ktorého sa týkajú. Pri spore alebo zákonnej povinnosti sa potrebné údaje uchovávajú dlhšie. Súhlas a jeho odvolanie sa dokumentujú po potrebnú dobu na preukázanie súladu. Po uplynutí lehôt údaje vymažeme alebo anonymizujeme."
+      },
+      {
+        "title": "5. Príjemcovia a prenosy",
+        "body": "Údaje môžu byť sprístupnené oprávneným osobám, dodávateľom hostingu, e-mailových a IT služieb, účtovníkom, právnym poradcom a orgánom, ak je to potrebné a zákonné. Konkrétne služby a režim prenosov sú uvedené v technickej identifikácii. Pri prenose mimo EHP sa použije rozhodnutie o primeranosti, ak je platné pre príjemcu, alebo vhodné záruky podľa čl. 46 GDPR (napr. štandardné zmluvné doložky), prípadne zákonná výnimka. Informácie o zárukách a ich kópiu možno vyžiadať e-mailom."
+      },
+      {
+        "title": "6. Kontaktné formuláre a kalkulačka",
+        "body": "Podľa aktuálneho popisu webu formulár pripravuje správu v e-mailovom klientovi používateľa; web jej obsah sám neukladá do databázy. Po odoslaní e-mailu sa údaje spracúvajú pri vybavení dopytu. Meno, kontaktné údaje a zadanie sú potrebné v rozsahu nevyhnutnom na odpoveď. Bez nich nemusí byť možné ponuku pripraviť. Kalkulácia nezakladá objednávku ani právne záväzné automatizované rozhodnutie."
+      },
+      {
+        "title": "7. Cookies a externé zdroje",
+        "body": "Podľa existujúceho oznámenia nie sú v základnej verzii integrované analytické ani marketingové cookies; skutočné nastavenie treba overiť. Nevyhnutné technológie sa môžu použiť bez súhlasu len v zákonnom rozsahu. Ostatné cookies, lokálne úložisko či sledovacie prvky sa aktivujú až po preukázateľnom súhlase podľa § 109 ods. 8 zákona č. 452/2021 Z. z. Odmietnutie musí byť rovnako jednoduché ako prijatie a súhlas rovnako ľahko odvolateľný. Externé zdroje môžu sprístupniť technické údaje ich poskytovateľom; ich použitie a trvanie technológií budú uvedené v inventári pred publikovaním."
+      },
+      {
+        "title": "8. Bezpečnosť a klientské projekty",
+        "body": "Osobné údaje chránime primeranými technickými a organizačnými opatreniami podľa čl. 32 GDPR. Pri klientskych systémoch konáme ako sprostredkovateľ iba na základe pokynov a dohody podľa čl. 28; tento dokument nenahrádza uvedenú dohodu. AI funkcie s osobnými údajmi vyžadujú samostatné posúdenie a dohodnuté pravidlá spracúvania."
+      },
+      {
+        "title": "9. Vaše práva",
+        "body": "Za podmienok GDPR máte právo na prístup, opravu, vymazanie, obmedzenie, prenosnosť, námietku proti spracúvaniu na základe oprávneného záujmu a kedykoľvek proti priamemu marketingu. Súhlas môžete odvolať bez vplyvu na predchádzajúce zákonné spracúvanie. Žiadosť vybavíme spravidla do jedného mesiaca; pri zložitosti možno lehotu predĺžiť o ďalšie dva mesiace s včasným oznámením. Sťažnosť možno podať Úradu na ochranu osobných údajov SR (www.dataprotection.gov.sk) alebo príslušnému dozornému orgánu podľa čl. 77 GDPR."
+      },
+      {
+        "title": "10. Automatizácia a aktualizácie",
+        "body": "V tomto režime dopytov nepredpokladáme výlučne automatizované rozhodovanie s právnymi alebo obdobne závažnými účinkami podľa čl. 22 GDPR; pred publikovaním sa to overí. O podstatných zmenách spracúvania poskytneme informácie pred ich zavedením. Tento dokument je návrh vyžadujúci potvrdenie skutočných procesov."
+      }
+    ]
+  },
+  "cz": {
+    "termsTitle": "Všeobecné obchodní podmínky",
+    "privacyTitle": "Ochrana osobních údajů (GDPR)",
+    "back": "Zpět na tutka.sk",
+    "draft": "Návrh – před zveřejněním doplňte identifikační údaje a ověřte technické zpracování.",
+    "notice": "Beru na vědomí informace o zpracování osobních údajů. Odesláním poptávky nevzniká objednávka ani závazek.",
+    "identity": "Identifikace poskytovatele a správce",
+    "withdrawalTitle": "Vzor oznámení o odstoupení",
+    "withdrawalText": "Oznamuji, že odstupuji od smlouvy o poskytnutí služby: …; objednáno dne: …; jméno a příjmení: …; adresa: …; datum: …; podpis (pouze v listinné podobě): ….",
+    "terms": [
+      {
+        "title": "1. Působnost a strany",
+        "body": "Podmínky upravují služby pod značkou TUTKA prostřednictvím tutka.sk. Klientem je podnikatel nebo spotřebitel jednající mimo své podnikání či povolání. Individuální smlouva má přednost v zákonném rozsahu; kogentní práva spotřebitele zůstávají zachována."
+      },
+      {
+        "title": "2. Služby",
+        "body": "Nabídka zahrnuje weby, mobilní aplikace, software na míru, AI agenty, chatboty, automatizaci, datové integrace, databáze, BI a konzultace. Rozsah, výstupy, kompatibilita, termín, podporu a infrastrukturu určí nabídka či smlouva."
+      },
+      {
+        "title": "3. Uzavření smlouvy",
+        "body": "Formulář a kalkulačka jsou nezávazné. Smlouva vzniká přijetím závazné nabídky podle jejích podmínek nebo podpisem smlouvy. Spotřebitel dostane předem celkovou cenu, podmínky plnění, poučení o odstoupení a další povinné informace; potvrzení na trvalém nosiči, např. e-mailem. Jazyk smlouvy se sjednává individuálně."
+      },
+      {
+        "title": "4. Cena a platby",
+        "body": "Online kalkulace je orientační. Pevná nebo hodinová cena, DPH podle daňového režimu, splatnost a záloha se sjednávají před zahájením. Spotřebiteli se sdělí celková cena včetně daní a poplatků nebo způsob výpočtu. Licence, domény, hosting, cloud a AI API se účtují pouze podle předem schválených podmínek. Změny rozsahu vyžadují dohodu o ceně a termínu. Prodlení se řeší podle smlouvy a zákona; záloha není automaticky nevratná."
+      },
+      {
+        "title": "5. Realizace a předání",
+        "body": "Klient poskytne potřebné podklady a oprávněné přístupy. Při překážkách se dohodne změna harmonogramu. Předání, testování a dokumentace probíhají podle smlouvy. Převzetím nezanikají zákonná práva z vad. Údržba, SLA a aktualizace se sjednávají zvlášť, nestanoví-li zákon jinak."
+      },
+      {
+        "title": "6. Autorská práva",
+        "body": "Oprávnění k výstupům, zdrojovému kódu, designu, databázím, repozitářům, výhradnost, území, dobu a podlicence určí smlouva. V zákonném rozsahu lze sjednat vznik licence po úplném zaplacení. Software a databáze na objednávku podléhají také § 90 a 91 slovenského autorského zákona. Existující a cizí komponenty včetně open source mají vlastní licence. Klient musí mít práva k podkladům; zveřejnění důvěrných referencí vyžaduje oprávnění."
+      },
+      {
+        "title": "7. Důvěrnost a data",
+        "body": "Strany chrání důvěrné informace a používají přístupy jen k dohodnutým účelům. Zpracování osobních údajů jménem klienta vyžaduje smlouvu dle čl. 28 GDPR před zahájením. Přístupy se předávají bezpečně; zálohování, vrácení nebo výmaz a zabezpečení se sjednají."
+      },
+      {
+        "title": "8. AI a externí služby",
+        "body": "Výstupy AI mohou chybovat a vyžadují lidskou kontrolu. Modely, datové toky, provozní náklady a odpovědnost za kontrolu určí projekt. Výpadky a změny API se řeší podle smlouvy a zákona a nezbavují poskytovatele jeho povinností. Tržby, SEO ani návratnost nejsou bez výslovné dohody garantovány."
+      },
+      {
+        "title": "9. Vady a odpovědnost",
+        "body": "Vady oznamujte e-mailem či na adrese poskytovatele s popisem a dostupnými podklady. Spotřebitel obdrží potvrzení a informaci o lhůtě nápravy podle zákona. Práva z vadného digitálního plnění a povinné aktualizace nejsou dotčena. Odpovědnost se řídí zákonem; zvláštní B2B limity lze sjednat pouze zákonným způsobem."
+      },
+      {
+        "title": "10. Odstoupení spotřebitele",
+        "body": "U služby a nehmotného digitálního obsahu sjednaných na dálku lze zpravidla odstoupit bez důvodu do 14 dnů od uzavření. Oznámení zašlete včas e-mailem nebo poštou, případně podle vzoru níže. Při výslovné žádosti o dřívější zahájení služby se při odstoupení hradí poměrná část skutečného plnění za zákonných podmínek. U plně poskytnuté placené služby právo zaniká pouze při zákonných podmínkách včetně předchozího výslovného souhlasu a poučení. U placeného digitálního obsahu bez hmotného nosiče může zaniknout zahájením dodání pouze s předchozím výslovným souhlasem, potvrzením vědomí ztráty práva a zákonným potvrzením smlouvy. Vývoj na míru sám o sobě odstoupení nevylučuje. Platby se vracejí v zákonném rozsahu do 14 dnů od doručení oznámení stejným způsobem, není-li bez poplatků sjednáno jinak. U smluv sjednaných online rozhraním bude dostupná zákonná funkce odstoupení. Při nevyžádané návštěvě či prodejní akci může platit lhůta 30 dnů."
+      },
+      {
+        "title": "11. Řešení sporů",
+        "body": "Spotřebitel může požádat poskytovatele o nápravu. Při zamítnutí či bez odpovědi do 30 dnů lze za zákonných podmínek podat návrh na alternativní řešení u Slovenské obchodní inspekce (www.soi.sk), zpravidla do jednoho roku; spor s vyčíslitelnou hodnotou nejvýše 20 EUR může být odmítnut. Právo na soudní ochranu zůstává."
+      },
+      {
+        "title": "12. Rozhodné právo a změny",
+        "body": "Použije se slovenské právo, aniž je spotřebitel zbaven povinné ochrany jinak použitelného práva nebo zákonné soudní příslušnosti. Nové znění platí pro budoucí smlouvy; existující se nemění jednostranně mimo zákonné či sjednané podmínky."
+      }
+    ],
+    "privacy": [
+      {
+        "title": "1. Správce",
+        "body": "Správce uvedený v identifikaci zpracovává údaje při návštěvě webu, komunikaci, nabídkách a plnění smluv podle GDPR (EU 2016/679) a slovenského zákona č. 18/2018 Z. z. Žádosti zasílejte na kontaktní e-mail; údaje pověřence, je-li jmenován, jsou v identifikaci."
+      },
+      {
+        "title": "2. Údaje a zdroje",
+        "body": "Jméno, e-mail, telefon, firma, zadání, rozpočet, termín, korespondence a smluvní a fakturační údaje získáváme od vás. Při provozu webu mohou vznikat IP adresy, čas požadavku, informace o prohlížeči a bezpečnostní logy. Neposílejte citlivé údaje ani hesla běžným formulářem. U údajů od jiných osob se použije čl. 14 GDPR, je-li relevantní."
+      },
+      {
+        "title": "3. Účely a základy",
+        "body": "Poptávka fyzické osoby, nabídka a smlouva: čl. 6 odst. 1 písm. b) GDPR. Komunikace se zástupci firem, bezpečnost a právní nároky: písm. f), oprávněný zájem na komunikaci, bezpečnosti a ochraně práv. Účetnictví a zákonné povinnosti: písm. c). Případná volitelná analytika či marketing založené na souhlasu: písm. a), s možností odvolání. Poptávka není podmíněna marketingovým souhlasem."
+      },
+      {
+        "title": "4. Uchovávání",
+        "body": "Navržené lhůty: neúspěšné poptávky nejvýše 12 měsíců od posledního kontaktu; technické logy nejvýše 90 dnů, není-li nutná delší ochrana kvůli incidentu; smluvní údaje po dobu plnění a ochrany nároků, zejména promlčecích lhůt. Účetní doklady zpravidla 10 let po příslušném roce. Spory a právní povinnosti mohou vyžadovat delší dobu; souhlasy a odvolání se evidují po dobu nutnou k prokázání souladu. Poté výmaz či anonymizace."
+      },
+      {
+        "title": "5. Příjemci a přenosy",
+        "body": "Oprávněné osoby, dodavatelé hostingu, e-mailu a IT, účetní, právní poradci a příslušné orgány získávají jen potřebné údaje na zákonném základě. Konkrétní služby a přenosy jsou v technické identifikaci. Mimo EHP se použije rozhodnutí o odpovídající ochraně, vhodné záruky dle čl. 46 (např. standardní doložky) či zákonná výjimka. Informace a kopii záruk lze vyžádat e-mailem."
+      },
+      {
+        "title": "6. Formuláře a kalkulačka",
+        "body": "Podle současného popisu webu formulář připravuje zprávu v e-mailovém klientovi uživatele a web sám obsah neukládá do databáze. Po odeslání se údaje zpracují pro poptávku. Jméno, kontakt a zadání jsou nezbytné k odpovědi; bez nich nemusí být nabídka možná. Kalkulace není objednávkou ani automatizovaným právně závazným rozhodnutím."
+      },
+      {
+        "title": "7. Cookies",
+        "body": "Podle současného oznámení nejsou integrovány analytické ani marketingové cookies; nastavení je třeba ověřit. Nezbytné technologie jsou bez souhlasu jen v zákonném rozsahu. Ostatní cookies, úložiště a sledování se aktivují až po prokazatelném souhlasu dle § 109 odst. 8 slovenského zákona č. 452/2021 Z. z. Odmítnutí i odvolání musí být stejně snadné jako udělení. Externí zdroje mohou předávat technické údaje; inventář uvede poskytovatele a dobu trvání před zveřejněním."
+      },
+      {
+        "title": "8. Zabezpečení",
+        "body": "Přiměřená technická a organizační opatření dle čl. 32 GDPR chrání údaje. Při klientských projektech je zpracování jménem klienta založeno na pokynech a smlouvě dle čl. 28; tento dokument ji nenahrazuje. AI s osobními údaji vyžaduje samostatné posouzení."
+      },
+      {
+        "title": "9. Práva",
+        "body": "Za podmínek GDPR máte právo na přístup, opravu, výmaz, omezení, přenositelnost, námitku proti oprávněnému zájmu a kdykoli proti přímému marketingu, odvolání souhlasu bez zpětného účinku. Odpověď zpravidla do měsíce, při složitosti prodloužení o další dva měsíce s včasným oznámením. Stížnost lze podat u slovenského úřadu (www.dataprotection.gov.sk) nebo příslušného orgánu dle čl. 77."
+      },
+      {
+        "title": "10. Automatizace a změny",
+        "body": "U poptávek se nepředpokládá výlučně automatizované rozhodování s právním či obdobně významným účinkem dle čl. 22; ověřte před zveřejněním. O významných změnách informujeme před jejich zavedením. Návrh vyžaduje potvrzení skutečných postupů."
+      }
+    ]
+  },
+  "en": {
+    "termsTitle": "General Terms and Conditions",
+    "privacyTitle": "Privacy Policy (GDPR)",
+    "back": "Back to tutka.sk",
+    "draft": "Draft – complete the legal identity and verify actual processing before publication.",
+    "notice": "I acknowledge the privacy information. Submitting an enquiry does not create an order or commitment.",
+    "identity": "Service provider and data controller details",
+    "withdrawalTitle": "Model withdrawal notice",
+    "withdrawalText": "I hereby give notice that I withdraw from my contract for the following service: …; ordered on: …; name: …; address: …; date: …; signature (only if submitted on paper): ….",
+    "terms": [
+      {
+        "title": "1. Scope and parties",
+        "body": "These terms govern services offered under the TUTKA brand through tutka.sk. Clients may be businesses or consumers acting outside their trade or profession. Individually agreed terms take precedence where lawful; mandatory consumer rights remain unaffected."
+      },
+      {
+        "title": "2. Services",
+        "body": "Services include design, development, testing and deployment of websites, mobile and custom software, AI agents, chatbots, automation, data integration, databases, BI and consultancy. The quotation or contract specifies deliverables, compatibility, timetable, support and infrastructure requirements."
+      },
+      {
+        "title": "3. Contract formation",
+        "body": "The enquiry form and calculator are non-binding. A contract is formed by accepting a binding quotation in accordance with its terms or signing an agreement. Before commitment, consumers receive the total price, performance conditions, withdrawal information and other mandatory disclosures; confirmation is provided on a durable medium, such as email. The contract language is agreed individually."
+      },
+      {
+        "title": "4. Pricing and payments",
+        "body": "Online rates and estimates are indicative. Fixed or hourly fees, applicable VAT, due dates and any advance payment are agreed before work starts. Consumers receive the total price including taxes and known charges, or the calculation method. Licences, domains, hosting, cloud and AI API costs are charged only on previously agreed terms. Scope changes require agreement on price and schedule. Late payments are handled under the agreement and law; advances are not automatically non-refundable."
+      },
+      {
+        "title": "5. Delivery and acceptance",
+        "body": "Clients provide necessary materials and authorised access. Obstacles are addressed by agreeing timetable adjustments. Delivery, testing and documentation follow the agreement. Acceptance does not waive statutory defect rights. Maintenance, updates and SLAs are agreed separately except where required by law."
+      },
+      {
+        "title": "6. Intellectual property",
+        "body": "The contract expressly defines rights in deliverables, source code, designs and databases, repository delivery, exclusivity, territory, duration and sublicensing. A licence may be agreed to commence upon full payment where lawful. Commissioned software and databases are also subject to sections 90 and 91 of the Slovak Copyright Act. Existing, open-source and third-party components retain their applicable licences. Clients must have rights to supplied materials; confidential references and client data may be published only with appropriate authorisation."
+      },
+      {
+        "title": "7. Confidentiality and data",
+        "body": "Both parties protect confidential information and use access only for agreed purposes. Processing personal data on behalf of a client requires an Article 28 GDPR agreement before processing. Credentials are exchanged securely. Backup, return or deletion and project security arrangements are agreed according to scope."
+      },
+      {
+        "title": "8. AI and third-party platforms",
+        "body": "AI outputs may be inaccurate and require appropriate human verification. Models, data flows, costs and review responsibilities are determined for each project. API changes and third-party downtime are handled under the contract and law and do not excuse the provider's own obligations. Revenue, SEO rankings and return on investment are not guaranteed unless expressly agreed."
+      },
+      {
+        "title": "9. Defects and liability",
+        "body": "Report defects by email or at the provider's address with a description and available evidence. Consumers receive confirmation and information about the statutory remedy period. Rights concerning non-conforming digital performance and mandatory updates remain intact. Liability follows applicable law; separate B2B limitations may be agreed only to the extent permitted by law."
+      },
+      {
+        "title": "10. Consumer withdrawal",
+        "body": "For distance contracts for services or digital content not supplied on a tangible medium, consumers generally have 14 days from conclusion to withdraw without reason. Send a clear notice before expiry by email or post; the model below is optional. If the consumer expressly requests early performance of a service and subsequently withdraws, a proportionate charge for actual performance is due where statutory conditions are met. For paid services, the right is lost upon full performance only if legal requirements, including prior express consent and acknowledgement, are met. For paid intangible digital content, the right may be lost when supply begins only with prior express consent, acknowledgement of loss and statutory contract confirmation. Custom development alone does not exclude withdrawal. Refunds are made to the extent required by law within 14 days after receipt of notice, using the same payment method unless a fee-free alternative is agreed. A statutory online withdrawal function will be available for contracts concluded through an online interface. A 30-day period may apply to unsolicited visits or sales excursions."
+      },
+      {
+        "title": "11. Disputes",
+        "body": "Consumers may request a remedy from the provider. If refused or unanswered for 30 days, eligible consumers may apply for alternative dispute resolution, for example to the Slovak Trade Inspection (www.soi.sk), generally within one year. Disputes with a quantifiable value of EUR 20 or less may be rejected. Access to courts remains unaffected."
+      },
+      {
+        "title": "12. Applicable law and changes",
+        "body": "Slovak law applies without depriving consumers of mandatory protection under the law otherwise applicable or of statutory jurisdiction. Updated terms apply to future contracts; existing agreements are not changed unilaterally outside agreed or statutory conditions."
+      }
+    ],
+    "privacy": [
+      {
+        "title": "1. Controller",
+        "body": "The controller identified below processes personal data in connection with tutka.sk, communications, quotations and contracts under GDPR (EU 2016/679) and Slovak Act No. 18/2018. Send privacy requests to the contact email. Data protection officer details, if appointed, appear in the identification section."
+      },
+      {
+        "title": "2. Data and sources",
+        "body": "We receive names, email addresses, telephone numbers, company details, project descriptions, budgets, deadlines, correspondence, contract and billing data from you. Technical operation may generate IP addresses, request times, browser information and security logs. Do not send sensitive data or passwords through ordinary forms. Article 14 GDPR information is supplied where applicable to indirectly obtained data."
+      },
+      {
+        "title": "3. Purposes and legal bases",
+        "body": "Individual enquiries, quotations and contract performance: Article 6(1)(b) GDPR. Business contact representatives, security and legal claims: Article 6(1)(f), legitimate interests in business communication, security and protecting rights. Accounting and statutory obligations: Article 6(1)(c). If consent-based optional analytics or marketing is introduced, Article 6(1)(a) applies and consent can be withdrawn. Marketing consent is not a condition of an enquiry."
+      },
+      {
+        "title": "4. Retention",
+        "body": "Proposed schedule: unsuccessful enquiries for up to 12 months after last contact; technical logs for up to 90 days unless an incident warrants longer retention; contract records for performance and subsequent protection of rights, particularly applicable limitation periods. Accounting records generally for 10 years following the relevant year. Disputes or legal duties may require longer retention. Consent and withdrawal records are retained as necessary to demonstrate compliance. Data are then deleted or anonymised."
+      },
+      {
+        "title": "5. Recipients and transfers",
+        "body": "Authorised personnel, hosting, email and IT providers, accountants, legal advisers and competent authorities may receive necessary data on a lawful basis. Specific services and transfers appear in the technical identification. Transfers outside the EEA use an applicable adequacy decision, safeguards under Article 46 (e.g. standard contractual clauses) or a lawful derogation. Information and copies of safeguards can be requested by email."
+      },
+      {
+        "title": "6. Enquiries and calculator",
+        "body": "According to the current website notice, the form prepares a message in the user's email client; the website itself does not store its contents in a database. Once emailed, the data are processed to answer the enquiry. Necessary contact and project details are required to respond; without them a quotation may not be possible. The calculator is not an order or an automated legally binding decision."
+      },
+      {
+        "title": "7. Cookies and external resources",
+        "body": "The current notice states that no analytics or marketing cookies are integrated in the basic version; this must be verified. Strictly necessary technologies are exempt from consent only where legally permitted. Other cookies, local storage and tracking require prior demonstrable consent under section 109(8) of Slovak Act No. 452/2021. Refusal and withdrawal must be as easy as acceptance. External resources may disclose technical data to their providers; the inventory must identify actual providers and durations before publication."
+      },
+      {
+        "title": "8. Security and client projects",
+        "body": "Appropriate technical and organisational measures under Article 32 GDPR protect data. Processing on behalf of clients follows their instructions and an Article 28 agreement; this notice does not replace that agreement. AI involving personal data requires a separate assessment and processing arrangements."
+      },
+      {
+        "title": "9. Your rights",
+        "body": "Subject to GDPR conditions, you may access, rectify, erase, restrict and port data, object to legitimate-interest processing and object to direct marketing at any time. Withdraw consent without affecting earlier lawful processing. We generally respond within one month; complex requests may require two additional months with timely notification. Complaints may be lodged with Slovakia's Office for Personal Data Protection (www.dataprotection.gov.sk) or a competent authority under Article 77."
+      },
+      {
+        "title": "10. Automated decisions and changes",
+        "body": "No solely automated decisions producing legal or similarly significant effects under Article 22 are envisaged in this enquiry workflow; confirm before publication. Material processing changes will be communicated before implementation. This draft requires verification of actual practices."
+      }
+    ]
+  },
+  "de": {
+    "termsTitle": "Allgemeine Geschäftsbedingungen (AGB)",
+    "privacyTitle": "Datenschutzerklärung (DSGVO)",
+    "back": "Zurück zu tutka.sk",
+    "draft": "Entwurf – vor Veröffentlichung Anbieterangaben ergänzen und tatsächliche Verarbeitung prüfen.",
+    "notice": "Ich habe die Datenschutzhinweise zur Kenntnis genommen. Das Absenden einer Anfrage begründet keine Bestellung oder Verpflichtung.",
+    "identity": "Anbieter und Verantwortlicher",
+    "withdrawalTitle": "Muster-Widerrufsmitteilung",
+    "withdrawalText": "Hiermit widerrufe ich den von mir abgeschlossenen Vertrag über folgende Dienstleistung: …; bestellt am: …; Name: …; Anschrift: …; Datum: …; Unterschrift (nur bei Mitteilung auf Papier): ….",
+    "terms": [
+      {
+        "title": "1. Geltungsbereich",
+        "body": "Diese AGB gelten für Leistungen unter der Marke TUTKA über tutka.sk. Kunden sind Unternehmer oder Verbraucher, die außerhalb ihrer gewerblichen oder beruflichen Tätigkeit handeln. Individualvereinbarungen gehen im gesetzlich zulässigen Umfang vor; zwingende Verbraucherrechte bleiben unberührt."
+      },
+      {
+        "title": "2. Leistungen",
+        "body": "Angeboten werden Konzeption, Entwicklung, Tests und Bereitstellung von Websites, mobilen Apps, Individualsoftware, KI-Agenten, Chatbots, Automatisierung, Datenintegration, Datenbanken, BI und Beratung. Angebot oder Vertrag bestimmen Umfang, Ergebnisse, Kompatibilität, Termine, Support und Infrastruktur."
+      },
+      {
+        "title": "3. Vertragsschluss",
+        "body": "Kontaktformular und Rechner sind unverbindlich. Ein Vertrag entsteht durch Annahme eines verbindlichen Angebots nach dessen Bedingungen oder Unterzeichnung. Verbraucher erhalten vor Vertragsschluss Gesamtpreis, Leistungsbedingungen, Widerrufsinformationen und weitere Pflichtangaben sowie eine Bestätigung auf einem dauerhaften Datenträger, z. B. per E-Mail. Die Vertragssprache wird vereinbart."
+      },
+      {
+        "title": "4. Preise und Zahlung",
+        "body": "Onlinepreise sind Richtwerte. Fest- oder Stundenpreis, anwendbare Umsatzsteuer, Fälligkeit und Anzahlung werden vor Leistungsbeginn vereinbart. Verbraucher erhalten den Gesamtpreis einschließlich Steuern und bekannter Gebühren oder die Berechnungsmethode. Lizenzen, Domains, Hosting, Cloud und KI-API werden nur nach vorheriger Vereinbarung berechnet. Änderungen des Umfangs erfordern eine Preis- und Terminvereinbarung. Zahlungsverzug richtet sich nach Vertrag und Gesetz; Anzahlungen sind nicht automatisch verfallen."
+      },
+      {
+        "title": "5. Durchführung und Übergabe",
+        "body": "Kunden stellen erforderliche Unterlagen und berechtigte Zugänge bereit. Bei Hindernissen werden Termine angepasst. Übergabe, Tests und Dokumentation erfolgen gemäß Vertrag. Abnahme beseitigt keine gesetzlichen Mängelrechte. Wartung, Updates und SLA werden separat vereinbart, soweit nicht gesetzlich vorgeschrieben."
+      },
+      {
+        "title": "6. Urheberrecht und Lizenzen",
+        "body": "Der Vertrag regelt ausdrücklich Nutzungsrechte an Ergebnissen, Quellcode, Design und Datenbanken, Repository-Übergabe, Ausschließlichkeit, Gebiet, Laufzeit und Unterlizenzen. Soweit zulässig kann ein Lizenzbeginn nach vollständiger Zahlung vereinbart werden. Für Auftragssoftware und Datenbanken gelten auch §§ 90 und 91 des slowakischen Urheberrechtsgesetzes. Bestehende und fremde Komponenten einschließlich Open Source unterliegen ihren Lizenzen. Kunden müssen Rechte an bereitgestelltem Material besitzen. Vertrauliche Referenzen und Kundendaten dürfen nur mit entsprechender Berechtigung veröffentlicht werden."
+      },
+      {
+        "title": "7. Vertraulichkeit und Daten",
+        "body": "Beide Parteien schützen vertrauliche Informationen und nutzen Zugänge nur für vereinbarte Zwecke. Vor Verarbeitung personenbezogener Daten im Kundenauftrag ist eine Vereinbarung nach Art. 28 DSGVO erforderlich. Zugangsdaten werden sicher übermittelt; Backups, Rückgabe, Löschung und Projektsicherheit werden vereinbart."
+      },
+      {
+        "title": "8. KI und Drittanbieter",
+        "body": "KI-Ergebnisse können fehlerhaft sein und bedürfen angemessener menschlicher Kontrolle. Modelle, Datenflüsse, Kosten und Prüfverantwortung werden projektbezogen vereinbart. API-Änderungen und Ausfälle Dritter werden nach Vertrag und Gesetz behandelt und entbinden den Anbieter nicht von eigenen Pflichten. Umsätze, SEO-Platzierungen und Renditen sind ohne ausdrückliche Vereinbarung nicht garantiert."
+      },
+      {
+        "title": "9. Mängel und Haftung",
+        "body": "Mängel per E-Mail oder an die Anbieteranschrift mit Beschreibung und vorhandenen Nachweisen melden. Verbraucher erhalten eine Bestätigung und Angaben zur gesetzlichen Abhilfefrist. Rechte bei mangelhaften digitalen Leistungen und gesetzliche Aktualisierungspflichten bleiben bestehen. Die Haftung richtet sich nach dem Gesetz; besondere B2B-Grenzen sind nur im zulässigen Umfang vereinbar."
+      },
+      {
+        "title": "10. Widerrufsrecht",
+        "body": "Bei Fernabsatzverträgen über Dienstleistungen oder nicht auf körperlichen Datenträgern gelieferte digitale Inhalte können Verbraucher grundsätzlich binnen 14 Tagen ab Vertragsschluss ohne Grund widerrufen. Eine eindeutige Mitteilung ist fristgerecht per E-Mail oder Post zu senden; das Muster unten ist freiwillig. Bei ausdrücklichem Verlangen nach vorzeitigem Leistungsbeginn und anschließendem Widerruf ist unter gesetzlichen Voraussetzungen ein anteiliger Betrag für die tatsächliche Leistung zu zahlen. Bei entgeltlichen Dienstleistungen erlischt das Recht bei vollständiger Erfüllung nur unter gesetzlichen Voraussetzungen einschließlich vorheriger ausdrücklicher Zustimmung und Kenntnisbestätigung. Bei entgeltlichen unkörperlichen digitalen Inhalten erlischt es mit Lieferbeginn nur bei vorheriger ausdrücklicher Zustimmung, Bestätigung der Kenntnis des Verlusts und gesetzlicher Vertragsbestätigung. Individualentwicklung allein schließt den Widerruf nicht aus. Erstattungen erfolgen im gesetzlichen Umfang binnen 14 Tagen nach Eingang des Widerrufs mit demselben Zahlungsmittel, sofern keine kostenfreie Alternative vereinbart wurde. Bei über eine Online-Benutzeroberfläche geschlossenen Verträgen steht die gesetzliche Widerrufsfunktion zur Verfügung. Bei unaufgeforderten Besuchen oder Verkaufsfahrten kann eine Frist von 30 Tagen gelten."
+      },
+      {
+        "title": "11. Streitbeilegung",
+        "body": "Verbraucher können Abhilfe verlangen. Bei Ablehnung oder fehlender Antwort binnen 30 Tagen können sie unter gesetzlichen Voraussetzungen, grundsätzlich binnen eines Jahres, eine alternative Streitbeilegung etwa bei der Slowakischen Handelsinspektion (www.soi.sk) beantragen. Streitwerte bis 20 EUR können abgelehnt werden. Der Rechtsweg bleibt offen."
+      },
+      {
+        "title": "12. Recht und Änderungen",
+        "body": "Slowakisches Recht gilt, ohne Verbrauchern zwingenden Schutz des sonst anwendbaren Rechts oder gesetzliche Gerichtsstände zu entziehen. Neue Bedingungen gelten für künftige Verträge; bestehende Verträge werden nicht außerhalb vereinbarter oder gesetzlicher Voraussetzungen einseitig geändert."
+      }
+    ],
+    "privacy": [
+      {
+        "title": "1. Verantwortlicher",
+        "body": "Der unten bezeichnete Verantwortliche verarbeitet Daten bei Nutzung von tutka.sk, Kommunikation, Angeboten und Verträgen gemäß DSGVO (EU 2016/679) und slowakischem Gesetz Nr. 18/2018. Anfragen zum Datenschutz richten Sie an die Kontakt-E-Mail. Angaben zum Datenschutzbeauftragten, sofern bestellt, stehen in der Identifikation."
+      },
+      {
+        "title": "2. Daten und Quellen",
+        "body": "Von Ihnen erhalten wir Name, E-Mail, Telefon, Firmenname, Projektbeschreibung, Budget, Termin, Korrespondenz, Vertrags- und Rechnungsdaten. Beim Betrieb können IP-Adressen, Anfragezeit, Browserdaten und Sicherheitsprotokolle anfallen. Senden Sie keine sensiblen Daten oder Passwörter über allgemeine Formulare. Bei indirekter Datenerhebung gelten ggf. die Informationspflichten nach Art. 14 DSGVO."
+      },
+      {
+        "title": "3. Zwecke und Rechtsgrundlagen",
+        "body": "Anfragen natürlicher Personen, Angebote und Vertragsdurchführung: Art. 6 Abs. 1 lit. b DSGVO. Geschäftskontakte, Sicherheit und Rechtsansprüche: lit. f, berechtigte Interessen an Kommunikation, Sicherheit und Rechtsschutz. Buchhaltung und gesetzliche Pflichten: lit. c. Optionale einwilligungsbasierte Analyse oder Werbung, sofern eingeführt: lit. a; Einwilligung jederzeit widerrufbar. Marketingeinwilligung ist keine Voraussetzung einer Anfrage."
+      },
+      {
+        "title": "4. Speicherdauer",
+        "body": "Vorgeschlagen: erfolglose Anfragen bis zu 12 Monate nach letztem Kontakt; technische Logs bis zu 90 Tage, außer bei erforderlicher längerer Vorfallaufklärung; Vertragsdaten während der Durchführung und danach zur Rechtswahrung, insbesondere während Verjährungsfristen. Buchungsbelege grundsätzlich 10 Jahre nach dem betreffenden Jahr. Streitfälle oder Gesetze können längere Speicherung verlangen. Einwilligungen und Widerrufe werden zum Nachweis der Rechtmäßigkeit erforderlichenfalls gespeichert. Danach Löschung oder Anonymisierung."
+      },
+      {
+        "title": "5. Empfänger und Übermittlungen",
+        "body": "Berechtigte Personen, Hosting-, E-Mail- und IT-Dienstleister, Buchhaltung, Rechtsberatung und Behörden erhalten erforderliche Daten auf rechtmäßiger Grundlage. Konkrete Dienste und Transfers stehen in der technischen Identifikation. Außerhalb des EWR gelten anwendbare Angemessenheitsbeschlüsse, geeignete Garantien nach Art. 46 (z. B. Standardvertragsklauseln) oder gesetzliche Ausnahmen. Informationen und Kopien der Garantien können per E-Mail angefordert werden."
+      },
+      {
+        "title": "6. Formulare und Rechner",
+        "body": "Laut aktuellen Website-Hinweisen erstellt das Formular eine Nachricht im E-Mail-Programm des Nutzers; die Website speichert deren Inhalt nicht selbst in einer Datenbank. Nach E-Mail-Versand werden Daten zur Anfragebearbeitung genutzt. Erforderliche Kontakt- und Projektangaben sind für eine Antwort nötig; ohne sie ist ggf. kein Angebot möglich. Die Berechnung ist keine Bestellung oder automatisierte rechtlich bindende Entscheidung."
+      },
+      {
+        "title": "7. Cookies und externe Inhalte",
+        "body": "Laut bestehendem Hinweis sind in der Basisversion keine Analyse- oder Marketing-Cookies integriert; dies ist zu prüfen. Unbedingt notwendige Technologien sind nur im gesetzlichen Umfang einwilligungsfrei. Andere Cookies, lokale Speicherung und Tracking benötigen vorherige nachweisbare Einwilligung nach § 109 Abs. 8 des slowakischen Gesetzes Nr. 452/2021. Ablehnung und Widerruf sind so einfach wie Zustimmung zu gestalten. Externe Ressourcen können technische Daten übermitteln; Anbieter und Laufzeiten sind vor Veröffentlichung im Inventar anzugeben."
+      },
+      {
+        "title": "8. Sicherheit und Auftragsverarbeitung",
+        "body": "Angemessene technische und organisatorische Maßnahmen nach Art. 32 DSGVO schützen Daten. Verarbeitung im Kundenauftrag erfolgt nach Weisungen und einer Vereinbarung nach Art. 28; diese Erklärung ersetzt sie nicht. KI mit personenbezogenen Daten erfordert gesonderte Prüfung und Regelungen."
+      },
+      {
+        "title": "9. Ihre Rechte",
+        "body": "Nach Maßgabe der DSGVO bestehen Rechte auf Auskunft, Berichtigung, Löschung, Einschränkung, Datenübertragbarkeit, Widerspruch gegen Verarbeitung aus berechtigtem Interesse sowie jederzeit gegen Direktwerbung. Einwilligung kann ohne Rückwirkung widerrufen werden. Antwort grundsätzlich binnen eines Monats; bei Komplexität Verlängerung um zwei Monate mit fristgerechtem Hinweis. Beschwerde bei der slowakischen Datenschutzbehörde (www.dataprotection.gov.sk) oder zuständiger Behörde nach Art. 77 möglich."
+      },
+      {
+        "title": "10. Automatisierung und Änderungen",
+        "body": "Im Anfrageprozess sind keine ausschließlich automatisierten Entscheidungen mit rechtlicher oder ähnlich erheblicher Wirkung nach Art. 22 vorgesehen; vor Veröffentlichung prüfen. Über wesentliche Änderungen informieren wir vor Umsetzung. Der Entwurf erfordert Bestätigung tatsächlicher Abläufe."
+      }
+    ]
+  },
+  "pl": {
+    "termsTitle": "Ogólne warunki świadczenia usług",
+    "privacyTitle": "Polityka prywatności (RODO)",
+    "back": "Powrót do tutka.sk",
+    "draft": "Projekt – przed publikacją uzupełnij dane prawne i zweryfikuj faktyczne przetwarzanie.",
+    "notice": "Potwierdzam zapoznanie się z informacjami o przetwarzaniu danych. Wysłanie zapytania nie stanowi zamówienia ani zobowiązania.",
+    "identity": "Dane usługodawcy i administratora",
+    "withdrawalTitle": "Wzór oświadczenia o odstąpieniu",
+    "withdrawalText": "Niniejszym odstępuję od umowy o świadczenie następującej usługi: …; zamówionej dnia: …; imię i nazwisko: …; adres: …; data: …; podpis (tylko przy wersji papierowej): ….",
+    "terms": [
+      {
+        "title": "1. Zakres i strony",
+        "body": "Warunki dotyczą usług marki TUTKA oferowanych przez tutka.sk. Klientem jest przedsiębiorca lub konsument działający poza działalnością gospodarczą lub zawodową. Indywidualna umowa ma pierwszeństwo w dopuszczalnym zakresie; bezwzględnie obowiązujące prawa konsumentów pozostają nienaruszone."
+      },
+      {
+        "title": "2. Usługi",
+        "body": "Oferta obejmuje projektowanie, rozwój, testy i wdrażanie stron, aplikacji mobilnych, oprogramowania, agentów AI, chatbotów, automatyzacji, integracji danych, baz danych, BI oraz doradztwo. Oferta lub umowa określa zakres, rezultaty, kompatybilność, terminy, wsparcie i infrastrukturę."
+      },
+      {
+        "title": "3. Zawarcie umowy",
+        "body": "Formularz i kalkulator są niezobowiązujące. Umowa powstaje po przyjęciu wiążącej oferty zgodnie z jej warunkami lub podpisaniu umowy. Konsument otrzymuje wcześniej pełną cenę, warunki wykonania, informacje o odstąpieniu i inne wymagane informacje oraz potwierdzenie na trwałym nośniku, np. e-mailem. Język umowy ustala się indywidualnie."
+      },
+      {
+        "title": "4. Cena i płatności",
+        "body": "Ceny online są orientacyjne. Cena stała lub godzinowa, właściwy VAT, termin płatności i zaliczka są uzgadniane przed rozpoczęciem. Konsument otrzymuje całkowitą cenę z podatkami i znanymi opłatami lub metodę obliczenia. Licencje, domeny, hosting, chmura i API AI wymagają uprzedniego uzgodnienia kosztów. Zmiana zakresu wymaga uzgodnienia ceny i terminu. Opóźnienia rozlicza się zgodnie z umową i prawem; zaliczka nie jest automatycznie bezzwrotna."
+      },
+      {
+        "title": "5. Realizacja i odbiór",
+        "body": "Klient dostarcza potrzebne materiały i uprawniony dostęp. Przeszkody wymagają uzgodnienia harmonogramu. Odbiór, testy i dokumentacja następują zgodnie z umową. Odbiór nie wyłącza ustawowych praw z tytułu wad. Utrzymanie, aktualizacje i SLA uzgadnia się odrębnie, chyba że wynikają z prawa."
+      },
+      {
+        "title": "6. Własność intelektualna",
+        "body": "Umowa określa prawa do wyników, kodu źródłowego, projektów i baz danych, przekazanie repozytorium, wyłączność, terytorium, okres i sublicencje. W dopuszczalnym zakresie można ustalić rozpoczęcie licencji po pełnej zapłacie. Oprogramowanie i bazy na zamówienie podlegają także § 90 i 91 słowackiej ustawy o prawie autorskim. Istniejące i zewnętrzne elementy w tym open source podlegają swoim licencjom. Klient posiada prawa do materiałów; publikacja poufnych referencji wymaga uprawnienia."
+      },
+      {
+        "title": "7. Poufność i dane",
+        "body": "Strony chronią informacje poufne i wykorzystują dostęp wyłącznie w uzgodnionych celach. Przetwarzanie danych w imieniu klienta wymaga wcześniejszej umowy z art. 28 RODO. Dane dostępowe przekazuje się bezpiecznie; kopie, zwrot, usunięcie i bezpieczeństwo ustala się dla projektu."
+      },
+      {
+        "title": "8. AI i platformy zewnętrzne",
+        "body": "Wyniki AI mogą być błędne i wymagają odpowiedniej kontroli człowieka. Modele, przepływy danych, koszty i odpowiedzialność za kontrolę ustala się projektowo. Zmiany API i awarie rozpatruje się zgodnie z umową i prawem; nie zwalniają z własnych obowiązków usługodawcy. Wyniki sprzedaży, SEO i zwrot inwestycji nie są gwarantowane bez wyraźnej umowy."
+      },
+      {
+        "title": "9. Wady i odpowiedzialność",
+        "body": "Wady zgłaszaj e-mailem lub na adres usługodawcy z opisem i dostępnymi dowodami. Konsument otrzyma potwierdzenie oraz informację o ustawowym terminie naprawy. Prawa dotyczące niezgodnych świadczeń cyfrowych i obowiązkowych aktualizacji pozostają nienaruszone. Odpowiedzialność reguluje prawo; odrębne ograniczenia B2B są możliwe tylko w dopuszczalnym zakresie."
+      },
+      {
+        "title": "10. Odstąpienie konsumenta",
+        "body": "Przy umowie na odległość o usługę lub treść cyfrową bez materialnego nośnika konsument zasadniczo może odstąpić bez powodu w ciągu 14 dni od zawarcia. Wystarczy terminowe jednoznaczne oświadczenie e-mailem lub pocztą; wzór poniżej jest dobrowolny. Gdy konsument wyraźnie żąda wcześniejszego rozpoczęcia usługi, po odstąpieniu płaci proporcjonalnie za rzeczywiste wykonanie, jeśli spełniono warunki ustawowe. Prawo przy płatnej usłudze wygasa po pełnym wykonaniu tylko przy spełnieniu warunków prawnych, w tym uprzedniej wyraźnej zgody i potwierdzenia świadomości utraty prawa. Przy odpłatnej treści cyfrowej bez nośnika może wygasnąć od rozpoczęcia dostawy wyłącznie z uprzednią wyraźną zgodą, potwierdzeniem utraty prawa i wymaganym potwierdzeniem umowy. Sam rozwój na zamówienie nie wyłącza odstąpienia. Zwrot następuje w ustawowym zakresie w ciągu 14 dni od otrzymania oświadczenia tą samą metodą płatności, chyba że uzgodniono bezpłatną alternatywę. Umowy zawarte przez interfejs online będą objęte ustawową funkcją odstąpienia. Przy niezamówionej wizycie lub wycieczce sprzedażowej możliwy jest termin 30 dni."
+      },
+      {
+        "title": "11. Spory",
+        "body": "Konsument może żądać naprawienia sytuacji. Po odmowie lub braku odpowiedzi przez 30 dni może w ustawowych warunkach wystąpić o alternatywne rozstrzygnięcie, np. do Słowackiej Inspekcji Handlowej (www.soi.sk), zasadniczo w ciągu roku. Spory o wartości do 20 EUR mogą zostać odrzucone. Droga sądowa pozostaje otwarta."
+      },
+      {
+        "title": "12. Prawo i zmiany",
+        "body": "Stosuje się prawo słowackie bez pozbawiania konsumenta obowiązkowej ochrony prawa, które stosowano by inaczej, ani ustawowej właściwości sądu. Nowe warunki dotyczą przyszłych umów; istniejących nie zmienia się jednostronnie poza ustawą lub uzgodnieniami."
+      }
+    ],
+    "privacy": [
+      {
+        "title": "1. Administrator",
+        "body": "Administrator wskazany w danych identyfikacyjnych przetwarza dane w związku z tutka.sk, komunikacją, ofertami i umowami zgodnie z RODO (UE 2016/679) i słowacką ustawą nr 18/2018. Wnioski kieruj na kontaktowy e-mail. Dane inspektora ochrony danych, jeśli powołany, są w identyfikacji."
+      },
+      {
+        "title": "2. Dane i źródła",
+        "body": "Od Ciebie otrzymujemy imię i nazwisko, e-mail, telefon, firmę, opis projektu, budżet, termin, korespondencję i dane umowy i rozliczeń. Obsługa techniczna może generować IP, czas żądania, dane przeglądarki i logi bezpieczeństwa. Nie wysyłaj danych wrażliwych ani haseł zwykłymi formularzami. Przy danych pośrednich stosuje się art. 14 RODO, gdy ma zastosowanie."
+      },
+      {
+        "title": "3. Cele i podstawy",
+        "body": "Zapytania osób fizycznych, oferty i wykonanie umowy: art. 6 ust. 1 lit. b RODO. Kontakty firmowe, bezpieczeństwo i roszczenia: lit. f, uzasadniony interes w komunikacji, bezpieczeństwie i ochronie praw. Księgowość i obowiązki prawne: lit. c. Jeśli wprowadzimy dobrowolną analitykę lub marketing oparty na zgodzie: lit. a, zgoda odwoływalna. Zgoda marketingowa nie jest warunkiem zapytania."
+      },
+      {
+        "title": "4. Przechowywanie",
+        "body": "Proponowane okresy: niezrealizowane zapytania do 12 miesięcy od ostatniej komunikacji; logi do 90 dni, chyba że incydent wymaga dłuższej ochrony; dane umowne w okresie realizacji i ochrony roszczeń, zwłaszcza przedawnienia. Dokumenty księgowe zasadniczo 10 lat po danym roku. Spory lub obowiązki mogą wymagać dłuższych okresów. Zgody i wycofanie przechowuje się w zakresie potrzebnym do wykazania zgodności. Następnie dane usuwa się lub anonimizuje."
+      },
+      {
+        "title": "5. Odbiorcy i transfery",
+        "body": "Uprawnione osoby, dostawcy hostingu, poczty i IT, księgowość, doradcy prawni i organy otrzymują niezbędne dane zgodnie z prawem. Konkretne usługi i transfery są w identyfikacji technicznej. Poza EOG stosuje się właściwe decyzje o adekwatności, zabezpieczenia art. 46 (np. standardowe klauzule) lub wyjątki prawne. Informacje i kopie zabezpieczeń można uzyskać e-mailem."
+      },
+      {
+        "title": "6. Formularz i kalkulator",
+        "body": "Według aktualnego opisu formularz przygotowuje wiadomość w kliencie pocztowym użytkownika; strona sama nie zapisuje treści w bazie danych. Po wysłaniu wiadomości dane służą do obsługi zapytania. Niezbędne dane kontaktowe i projektowe są potrzebne do odpowiedzi; bez nich oferta może być niemożliwa. Kalkulacja nie jest zamówieniem ani zautomatyzowaną wiążącą decyzją."
+      },
+      {
+        "title": "7. Cookies",
+        "body": "Według obecnej informacji wersja podstawowa nie zawiera cookies analitycznych ani marketingowych; należy to sprawdzić. Niezbędne technologie nie wymagają zgody tylko w zakresie prawa. Pozostałe cookies, pamięć lokalna i śledzenie wymagają uprzedniej udokumentowanej zgody zgodnie z § 109 ust. 8 słowackiej ustawy nr 452/2021. Odmowa i wycofanie muszą być równie proste jak akceptacja. Zasoby zewnętrzne mogą przekazywać dane techniczne; dostawców i okresy należy ująć w wykazie przed publikacją."
+      },
+      {
+        "title": "8. Bezpieczeństwo",
+        "body": "Dane chronią odpowiednie środki techniczne i organizacyjne zgodnie z art. 32. Przetwarzanie na rzecz klienta odbywa się według instrukcji i umowy art. 28; niniejsza polityka jej nie zastępuje. AI z danymi osobowymi wymaga osobnej oceny i uzgodnień."
+      },
+      {
+        "title": "9. Twoje prawa",
+        "body": "Zgodnie z RODO masz prawo dostępu, sprostowania, usunięcia, ograniczenia, przenoszenia, sprzeciwu wobec uzasadnionego interesu i w każdej chwili marketingu bezpośredniego oraz wycofania zgody bez wpływu na wcześniejsze przetwarzanie. Odpowiedź zasadniczo w miesiąc, przy złożoności dodatkowe dwa miesiące z terminowym powiadomieniem. Skarga do słowackiego urzędu (www.dataprotection.gov.sk) lub właściwego organu zgodnie z art. 77."
+      },
+      {
+        "title": "10. Automatyzacja i zmiany",
+        "body": "W procesie zapytań nie przewiduje się wyłącznie zautomatyzowanych decyzji o skutkach prawnych lub podobnie istotnych z art. 22; sprawdzić przed publikacją. O istotnych zmianach informujemy przed wdrożeniem. Projekt wymaga potwierdzenia faktycznych procesów."
+      }
+    ]
+  },
+  "es": {
+    "termsTitle": "Términos y condiciones generales",
+    "privacyTitle": "Política de privacidad (RGPD)",
+    "back": "Volver a tutka.sk",
+    "draft": "Borrador: complete los datos legales y verifique el tratamiento real antes de publicar.",
+    "notice": "He leído la información sobre el tratamiento de datos. Enviar una consulta no constituye un pedido ni un compromiso.",
+    "identity": "Identificación del prestador y del responsable del tratamiento",
+    "withdrawalTitle": "Modelo de comunicación de desistimiento",
+    "withdrawalText": "Por la presente comunico que desisto de mi contrato de prestación del siguiente servicio: …; pedido el: …; nombre y apellidos: …; domicilio: …; fecha: …; firma (solo si se presenta en papel): ….",
+    "terms": [
+      {
+        "title": "1. Ámbito y partes",
+        "body": "Estas condiciones regulan los servicios ofrecidos bajo la marca TUTKA a través de tutka.sk. El cliente puede ser empresario o consumidor que actúa fuera de su actividad profesional o empresarial. El contrato individual prevalece en la medida legalmente permitida; se respetan los derechos imperativos de los consumidores."
+      },
+      {
+        "title": "2. Servicios",
+        "body": "Se ofrecen diseño, desarrollo, pruebas y despliegue de webs, aplicaciones móviles, software a medida, agentes de IA, chatbots, automatización, integración de datos, bases de datos, BI y consultoría. La oferta o contrato determina el alcance, entregables, compatibilidad, plazos, soporte e infraestructura."
+      },
+      {
+        "title": "3. Celebración del contrato",
+        "body": "El formulario y la calculadora no son vinculantes. El contrato nace al aceptar una oferta vinculante conforme a sus condiciones o al firmar un acuerdo. Antes de contratar, el consumidor recibe el precio total, condiciones de ejecución, información sobre desistimiento y demás información obligatoria; se confirma en soporte duradero, por ejemplo correo electrónico. El idioma contractual se acuerda individualmente."
+      },
+      {
+        "title": "4. Precios y pagos",
+        "body": "Las tarifas y estimaciones online son orientativas. El precio fijo o por hora, IVA aplicable, vencimientos y anticipos se acuerdan antes de comenzar. El consumidor recibe el precio total con impuestos y gastos conocidos o su método de cálculo. Licencias, dominios, alojamiento, nube y API de IA solo se cobran según condiciones acordadas previamente. Los cambios de alcance requieren acuerdo sobre precio y plazo. La mora se rige por el contrato y la ley; los anticipos no son automáticamente irrecuperables."
+      },
+      {
+        "title": "5. Ejecución y entrega",
+        "body": "El cliente facilita los materiales y accesos autorizados necesarios. Los obstáculos se resuelven acordando ajustes del calendario. La entrega, pruebas y documentación siguen el contrato. La aceptación no elimina derechos legales por defectos. Mantenimiento, actualizaciones y SLA se acuerdan aparte salvo exigencia legal."
+      },
+      {
+        "title": "6. Propiedad intelectual",
+        "body": "El contrato define expresamente derechos sobre entregables, código fuente, diseños y bases de datos, entrega del repositorio, exclusividad, territorio, duración y sublicencias. Cuando sea lícito, puede acordarse que la licencia comience tras el pago íntegro. El software y las bases de datos por encargo se rigen también por los artículos 90 y 91 de la Ley de propiedad intelectual eslovaca. Los componentes preexistentes, abiertos o de terceros conservan sus licencias. El cliente debe disponer de derechos sobre sus materiales. Las referencias confidenciales y datos de clientes requieren autorización para publicarse."
+      },
+      {
+        "title": "7. Confidencialidad y datos",
+        "body": "Ambas partes protegen la información confidencial y utilizan los accesos para los fines pactados. Antes de tratar datos personales por cuenta del cliente se requiere un acuerdo conforme al artículo 28 RGPD. Las credenciales se intercambian de forma segura; las copias, devolución, supresión y seguridad se acuerdan según el proyecto."
+      },
+      {
+        "title": "8. IA y terceros",
+        "body": "Los resultados de IA pueden ser erróneos y requieren revisión humana apropiada. Modelos, flujos de datos, costes y responsabilidades de revisión se acuerdan por proyecto. Los cambios de API y fallos externos se resuelven según el contrato y la ley y no eximen al prestador de sus obligaciones. No se garantizan ingresos, posiciones SEO o rentabilidad salvo pacto expreso."
+      },
+      {
+        "title": "9. Defectos y responsabilidad",
+        "body": "Comunique defectos por correo electrónico o a la dirección del prestador con descripción y pruebas disponibles. El consumidor recibe confirmación e información sobre el plazo legal de subsanación. Se mantienen los derechos sobre prestaciones digitales no conformes y actualizaciones obligatorias. La responsabilidad se rige por la ley; los límites B2B específicos solo pueden pactarse en la medida permitida."
+      },
+      {
+        "title": "10. Desistimiento del consumidor",
+        "body": "En contratos a distancia de servicios o contenidos digitales sin soporte material, el consumidor dispone generalmente de 14 días desde la celebración para desistir sin motivo. Envíe una comunicación inequívoca antes del vencimiento por correo electrónico o postal; el modelo inferior es opcional. Si solicita expresamente el inicio anticipado de un servicio y después desiste, abonará la parte proporcional efectivamente prestada cuando se cumplan los requisitos legales. En servicios de pago el derecho solo se pierde al completarse la prestación si concurren las condiciones legales, incluido consentimiento expreso previo y reconocimiento de la pérdida. Para contenido digital de pago sin soporte material, puede perderse al comenzar el suministro únicamente con consentimiento expreso previo, reconocimiento de la pérdida y confirmación contractual exigida. El desarrollo a medida no excluye por sí solo el desistimiento. Se reembolsan las cantidades legalmente exigibles en 14 días desde la recepción del aviso mediante el mismo medio, salvo acuerdo alternativo sin coste. Para contratos celebrados mediante una interfaz online estará disponible la función legal de desistimiento. En visitas no solicitadas o excursiones comerciales puede aplicarse un plazo de 30 días."
+      },
+      {
+        "title": "11. Resolución de litigios",
+        "body": "El consumidor puede solicitar una solución al prestador. Ante rechazo o ausencia de respuesta durante 30 días, puede solicitar resolución alternativa en las condiciones legales, por ejemplo ante la Inspección Comercial Eslovaca (www.soi.sk), generalmente en un año. Los litigios de valor cuantificable de hasta 20 EUR pueden rechazarse. Se mantiene el acceso a los tribunales."
+      },
+      {
+        "title": "12. Ley aplicable y cambios",
+        "body": "Rige la legislación eslovaca sin privar al consumidor de la protección imperativa de la ley que sería aplicable sin esa elección ni de la competencia judicial legal. Las nuevas condiciones se aplican a contratos futuros; los contratos vigentes no se modifican unilateralmente fuera de las condiciones legales o acordadas."
+      }
+    ],
+    "privacy": [
+      {
+        "title": "1. Responsable",
+        "body": "El responsable indicado en la identificación trata datos en relación con tutka.sk, comunicaciones, presupuestos y contratos conforme al RGPD (UE 2016/679) y la Ley eslovaca 18/2018. Envíe las solicitudes al correo de contacto. Los datos del delegado de protección de datos, si se designa, figuran en la identificación."
+      },
+      {
+        "title": "2. Datos y fuentes",
+        "body": "Recibimos de usted nombre, email, teléfono, empresa, descripción del proyecto, presupuesto, plazo, correspondencia y datos contractuales y de facturación. El funcionamiento técnico puede generar IP, hora de solicitud, información del navegador y registros de seguridad. No envíe datos sensibles ni contraseñas por formularios ordinarios. Para datos indirectos se facilita la información del artículo 14 cuando proceda."
+      },
+      {
+        "title": "3. Finalidades y bases jurídicas",
+        "body": "Consultas de personas físicas, ofertas y ejecución contractual: artículo 6.1.b RGPD. Contactos empresariales, seguridad y reclamaciones: artículo 6.1.f, interés legítimo en comunicación, seguridad y defensa de derechos. Contabilidad y obligaciones legales: artículo 6.1.c. Si se introduce analítica o marketing opcional basado en consentimiento: artículo 6.1.a; puede retirarse en cualquier momento. El consentimiento comercial no condiciona la consulta."
+      },
+      {
+        "title": "4. Conservación",
+        "body": "Plazos propuestos: consultas sin contratación hasta 12 meses desde el último contacto; registros técnicos hasta 90 días salvo necesidad adicional por incidentes; datos contractuales durante la ejecución y la defensa de derechos, especialmente los plazos de prescripción aplicables. Documentos contables generalmente durante 10 años siguientes al ejercicio. Los litigios y obligaciones legales pueden exigir más tiempo. Se conservan pruebas del consentimiento y su retirada mientras sea necesario para acreditar cumplimiento. Después se suprimen o anonimizan los datos."
+      },
+      {
+        "title": "5. Destinatarios y transferencias",
+        "body": "Personal autorizado, proveedores de alojamiento, correo y servicios informáticos, contables, asesores jurídicos y autoridades pueden recibir datos necesarios con base legal. Los servicios y transferencias concretos figuran en la identificación técnica. Fuera del EEE se aplica una decisión de adecuación válida, garantías del artículo 46 (por ejemplo cláusulas contractuales tipo) o una excepción legal. Puede solicitar información y copia de las garantías por correo electrónico."
+      },
+      {
+        "title": "6. Formularios y calculadora",
+        "body": "Según la información actual, el formulario prepara un mensaje en el cliente de correo del usuario; la web no almacena por sí misma su contenido en una base de datos. Tras el envío, se tratan los datos para responder. Los datos necesarios de contacto y proyecto son imprescindibles para contestar; sin ellos puede no ser posible presupuestar. La estimación no es un pedido ni una decisión automatizada jurídicamente vinculante."
+      },
+      {
+        "title": "7. Cookies y recursos externos",
+        "body": "El aviso actual indica que la versión básica no integra cookies analíticas ni publicitarias; debe verificarse. Las tecnologías estrictamente necesarias solo están exentas de consentimiento en los casos legales. Las restantes cookies, almacenamiento local y seguimiento requieren consentimiento previo demostrable según el artículo 109.8 de la Ley eslovaca 452/2021. Rechazar y retirar debe ser tan sencillo como aceptar. Los recursos externos pueden transmitir datos técnicos; sus proveedores y duraciones deben figurar en el inventario antes de publicar."
+      },
+      {
+        "title": "8. Seguridad y proyectos",
+        "body": "Se aplican medidas técnicas y organizativas apropiadas conforme al artículo 32 RGPD. El tratamiento por cuenta de clientes se realiza conforme a sus instrucciones y acuerdo del artículo 28; esta política no lo sustituye. La IA con datos personales requiere evaluación y reglas específicas."
+      },
+      {
+        "title": "9. Sus derechos",
+        "body": "Según el RGPD puede acceder, rectificar, suprimir, limitar, portar sus datos, oponerse al tratamiento por interés legítimo y en cualquier momento al marketing directo, y retirar consentimiento sin afectar el tratamiento lícito anterior. Respondemos normalmente en un mes; los casos complejos permiten dos meses adicionales con aviso oportuno. Puede reclamar ante la autoridad eslovaca (www.dataprotection.gov.sk) u otra autoridad competente según el artículo 77."
+      },
+      {
+        "title": "10. Automatización y modificaciones",
+        "body": "No se prevén decisiones exclusivamente automatizadas con efectos jurídicos o similares del artículo 22 en el proceso de consultas; verifíquese antes de publicar. Los cambios materiales se comunicarán antes de su aplicación. Este borrador requiere confirmar las prácticas reales."
+      }
+    ]
+  }
+}

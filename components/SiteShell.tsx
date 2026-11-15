@@ -6,6 +6,7 @@ import { useLanguage } from "@/components/LanguageProvider";
 import { CookieConsentProvider } from "./legal/CookieConsent";
 import { normalizeLegalLang, paths, type LegalLang } from "./legal/legal-shared";
 import Footer from "./Footer";
+import LeadGateway from "./leads/LeadGateway";
 
 export default function SiteShell({ children }: { children: ReactNode }) {
   const { lang } = useLanguage();
@@ -27,6 +28,7 @@ export default function SiteShell({ children }: { children: ReactNode }) {
     <CookieConsentProvider lang={activeLang}>
       {children}
       <Footer lang={activeLang} />
+      <LeadGateway lang={activeLang} exempt={isLegal || !!pathname?.startsWith("/api/")} />
     </CookieConsentProvider>
   );
 }

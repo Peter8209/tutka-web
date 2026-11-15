@@ -98,6 +98,10 @@
       {
         "title": "10. Automatizácia a aktualizácie",
         "body": "V tomto režime dopytov nepredpokladáme výlučne automatizované rozhodovanie s právnymi alebo obdobne závažnými účinkami podľa čl. 22 GDPR; pred publikovaním sa to overí. O podstatných zmenách spracúvania poskytneme informácie pred ich zavedením. Tento dokument je návrh vyžadujúci potvrdenie skutočných procesov."
+      },
+      {
+        "title": "11. Vstupný formulár a obchodné dopyty",
+        "body": "Ak návštevník dobrovoľne odošle vstupný formulár, spracujeme e-mail, telefónne číslo, jazyk, dátum a údaj o vyžiadanom kontakte na účel vybavenia jednorazového dopytu (čl. 6 ods. 1 písm. b) GDPR pri predzmluvných krokoch na žiadosť osoby, inak pri dobrovoľnom vyžiadaní kontaktu na základe súhlasu podľa písm. a)). E-mail nie je automaticky pridaný do newslettera. Súhlas možno odvolať alebo požiadať o výmaz cez kontaktný e-mail prevádzkovateľa. Oznámenie sa odosiela prostredníctvom služby Gmail spoločnosti Google do e-mailovej schránky prevádzkovateľa; Cloudflare Turnstile spracúva technické údaje potrebné na bezpečnostné overenie (oprávnený záujem na ochrane formulára pred zneužitím). Navrhovaná lehota uchovania neúspešného vstupného dopytu je 90 dní; pri uzatvorení zmluvy platia príslušné zmluvné lehoty. Pred aktiváciou potvrďte poskytovateľov, ich sídla, skutočné lehoty, zmluvy a mechanizmy prenosu mimo EHP podľa kapitoly V GDPR. Prípadný povinný režim uzavretej služby vyžaduje samostatne určený účel a právny základ pred jeho aktiváciou. E-mail a telefónne číslo sú povinné na odoslanie formulára; v dobrovoľnom režime možno web navštíviť bez ich poskytnutia. Údaje sa neoverujú SMS ani e-mailovým kódom."
       }
     ]
   },
@@ -200,6 +204,10 @@
       {
         "title": "10. Automatizace a změny",
         "body": "U poptávek se nepředpokládá výlučně automatizované rozhodování s právním či obdobně významným účinkem dle čl. 22; ověřte před zveřejněním. O významných změnách informujeme před jejich zavedením. Návrh vyžaduje potvrzení skutečných postupů."
+      },
+      {
+        "title": "11. Vstupní formulář a obchodní poptávky",
+        "body": "Při dobrovolném odeslání vstupního formuláře zpracováváme e-mail, telefonní číslo, jazyk, datum a informaci o vyžádaném kontaktu za účelem vyřízení jednorázové poptávky (čl. 6 odst. 1 písm. b) GDPR pro předsmluvní kroky na žádost osoby, jinak souhlas dle písm. a)). E-mail není automaticky přidán do newsletteru. Souhlas lze odvolat nebo požádat o výmaz prostřednictvím e-mailu správce. Oznámení se odesílá prostřednictvím služby Gmail společnosti Google do e-mailové schránky správce; Cloudflare Turnstile zpracovává technické údaje potřebné pro bezpečnostní ověření (oprávněný zájem na ochraně formuláře). Navrhovaná doba uchování neúspěšné vstupní poptávky je 90 dnů; při uzavření smlouvy platí příslušné smluvní lhůty. Před aktivací ověřte poskytovatele, jejich sídla, skutečné lhůty, smlouvy a mechanismy přenosu mimo EHP dle kapitoly V GDPR. Povinný režim uzavřené služby vyžaduje před aktivací samostatné určení účelu a právního základu. E-mail a telefonní číslo jsou povinné pro odeslání formuláře; v dobrovolném režimu lze web navštívit bez jejich poskytnutí. Údaje nejsou ověřovány SMS ani e-mailovým kódem."
       }
     ]
   },
@@ -302,6 +310,10 @@
       {
         "title": "10. Automated decisions and changes",
         "body": "No solely automated decisions producing legal or similarly significant effects under Article 22 are envisaged in this enquiry workflow; confirm before publication. Material processing changes will be communicated before implementation. This draft requires verification of actual practices."
+      },
+      {
+        "title": "11. Entry form and business enquiries",
+        "body": "When a visitor voluntarily submits the entry form, we process the email address, phone number, language, date and contact request to respond to a one-off enquiry (GDPR Article 6(1)(b) for requested pre-contractual steps, otherwise consent under Article 6(1)(a) for voluntary contact). The address is not automatically subscribed to a newsletter. Consent can be withdrawn and erasure requested via the controller’s email. The notification is sent via Google Gmail to the controller’s mailbox; Cloudflare Turnstile processes technical data needed for security verification (legitimate interest in protecting the form). The proposed retention for unsuccessful entry enquiries is 90 days; contractual retention applies if a contract follows. Before activation, confirm the providers, locations, actual retention, processing agreements and any Chapter V GDPR safeguards for transfers outside the EEA. Mandatory entry for a restricted service requires a separately established purpose and legal basis before activation. Email and phone number are required to submit the form; in optional mode the website may be visited without providing them. Neither field is verified by SMS or email code."
       }
     ]
   },
@@ -404,6 +416,10 @@
       {
         "title": "10. Automatisierung und Änderungen",
         "body": "Im Anfrageprozess sind keine ausschließlich automatisierten Entscheidungen mit rechtlicher oder ähnlich erheblicher Wirkung nach Art. 22 vorgesehen; vor Veröffentlichung prüfen. Über wesentliche Änderungen informieren wir vor Umsetzung. Der Entwurf erfordert Bestätigung tatsächlicher Abläufe."
+      },
+      {
+        "title": "11. Einstiegsformular und Geschäftsanfragen",
+        "body": "Bei freiwilligem Absenden des Einstiegsformulars verarbeiten wir E-Mail-Adresse, Telefonnummer, Sprache, Datum und Kontaktwunsch zur Bearbeitung einer einmaligen Anfrage (Art. 6 Abs. 1 lit. b DSGVO für angefragte vorvertragliche Maßnahmen, sonst Einwilligung nach lit. a für freiwillige Kontaktaufnahme). Es erfolgt keine automatische Newsletter-Anmeldung. Einwilligungen können über die E-Mail-Adresse des Verantwortlichen widerrufen und Löschungen beantragt werden. Die Benachrichtigung wird über Google Gmail an das Postfach des Verantwortlichen übermittelt; Cloudflare Turnstile verarbeitet technische Daten zur Sicherheitsprüfung (berechtigtes Interesse am Schutz des Formulars). Vorgeschlagene Aufbewahrung erfolgloser Einstiegsanfragen: 90 Tage; bei Vertragsschluss gelten die einschlägigen Vertragsfristen. Vor Aktivierung sind Anbieter, Standorte, tatsächliche Fristen, Verträge und Übermittlungsmechanismen außerhalb des EWR gemäß Kapitel V DSGVO zu prüfen. Ein obligatorischer Zugang zu einem geschlossenen Dienst erfordert vor Aktivierung einen gesondert bestimmten Zweck und eine Rechtsgrundlage. E-Mail-Adresse und Telefonnummer sind zum Absenden erforderlich; im freiwilligen Modus ist der Websitebesuch ohne diese Angaben möglich. Eine Verifizierung per SMS oder E-Mail-Code erfolgt nicht."
       }
     ]
   },
@@ -506,6 +522,10 @@
       {
         "title": "10. Automatyzacja i zmiany",
         "body": "W procesie zapytań nie przewiduje się wyłącznie zautomatyzowanych decyzji o skutkach prawnych lub podobnie istotnych z art. 22; sprawdzić przed publikacją. O istotnych zmianach informujemy przed wdrożeniem. Projekt wymaga potwierdzenia faktycznych procesów."
+      },
+      {
+        "title": "11. Formularz wejściowy i zapytania handlowe",
+        "body": "Po dobrowolnym wysłaniu formularza przetwarzamy adres e-mail, numer telefonu, język, datę i informację o prośbie o kontakt w celu obsługi jednorazowego zapytania (art. 6 ust. 1 lit. b RODO dla działań przed zawarciem umowy na żądanie osoby, w pozostałych przypadkach zgoda zgodnie z lit. a). Nie zapisujemy automatycznie do newslettera. Zgodę można wycofać i zażądać usunięcia danych przez e-mail administratora. Powiadomienie jest wysyłane za pośrednictwem usługi Google Gmail do skrzynki administratora; Cloudflare Turnstile przetwarza dane techniczne do weryfikacji bezpieczeństwa (uzasadniony interes ochrony formularza). Proponowany okres przechowywania nieskutecznych zapytań: 90 dni; w przypadku umowy obowiązują odpowiednie terminy umowne. Przed aktywacją należy potwierdzić dostawców, lokalizacje, rzeczywiste okresy, umowy i mechanizmy transferu poza EOG zgodnie z rozdziałem V RODO. Obowiązkowy dostęp do zamkniętej usługi wymaga wcześniejszego określenia odrębnego celu i podstawy prawnej. Adres e-mail i numer telefonu są wymagane do wysłania formularza; w trybie dobrowolnym można odwiedzić stronę bez ich podania. Dane nie są weryfikowane kodem SMS ani e-mail."
       }
     ]
   },
@@ -608,6 +628,10 @@
       {
         "title": "10. Automatización y modificaciones",
         "body": "No se prevén decisiones exclusivamente automatizadas con efectos jurídicos o similares del artículo 22 en el proceso de consultas; verifíquese antes de publicar. Los cambios materiales se comunicarán antes de su aplicación. Este borrador requiere confirmar las prácticas reales."
+      },
+      {
+        "title": "11. Formulario de acceso y consultas comerciales",
+        "body": "Al enviar voluntariamente el formulario de acceso, tratamos el correo electrónico, número de teléfono, idioma, fecha y solicitud de contacto para responder a una consulta puntual (art. 6.1.b RGPD para medidas precontractuales solicitadas por la persona; en otros casos, consentimiento del art. 6.1.a para el contacto voluntario). No se realiza una suscripción automática al boletín. El consentimiento puede retirarse y puede solicitarse la supresión mediante el correo del responsable. La notificación se envía a través de Google Gmail al buzón del responsable; Cloudflare Turnstile trata datos técnicos necesarios para verificar la seguridad (interés legítimo de proteger el formulario). Plazo propuesto para consultas sin éxito: 90 días; si se celebra un contrato, se aplican los plazos correspondientes. Antes de activar, confirme proveedores, ubicaciones, plazos reales, contratos y mecanismos de transferencia fuera del EEE conforme al capítulo V RGPD. El acceso obligatorio a un servicio restringido exige determinar previamente una finalidad y base jurídica independientes. El correo y el número de teléfono son obligatorios para enviar el formulario; en modo opcional se puede acceder sin facilitarlos. No se verifican mediante código SMS ni correo."
       }
     ]
   }

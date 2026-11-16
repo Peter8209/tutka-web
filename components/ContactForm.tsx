@@ -15,6 +15,16 @@ const data = {
 const services=["Web / corporate website","E-shop / customer portal","Web application / internal system","AI chatbot / conversational bot","Custom AI agent / multi-agent solution","Standalone AI module / AI integration","Process automation / workflow","API / backend / integrations","Python development / scripts / data processing","Kotlin / Android application","Flutter / Android / iOS application","Power BI / reporting / dashboards","Excel / Power Query / VBA automation","Tableau / visualisations","SQL / Microsoft SQL Server / databases","Oracle / PL/SQL","Other programming language / custom development","End-to-end solution from design to deployment"];
 const budgets=["Need a quote","Up to €500","€500 – €1,500","€1,500 – €3,000","€3,000 – €5,000","€5,000 – €10,000","€10,000+"];
 
+// Localized option labels; stable values preserve the existing API contract.
+const optionLabels: Record<string, string[]> = {
+ sk: ["Firemný web","E-shop / zákaznícky portál","Webová aplikácia / interný systém","AI chatbot","AI agent na mieru","AI modul / integrácia","Automatizácia procesov","API / backend / integrácie","Python / skripty / dáta","Kotlin / Android","Flutter / Android / iOS","Power BI / reporting","Excel / Power Query / VBA","Tableau / vizualizácie","SQL / databázy","Oracle / PL/SQL","Iný zákazkový vývoj","Kompletné riešenie od návrhu po nasadenie"],
+ cs: ["Firemní web","E-shop / zákaznický portál","Webová aplikace / interní systém","AI chatbot","AI agent na míru","AI modul / integrace","Automatizace procesů","API / backend / integrace","Python / skripty / data","Kotlin / Android","Flutter / Android / iOS","Power BI / reporting","Excel / Power Query / VBA","Tableau / vizualizace","SQL / databáze","Oracle / PL/SQL","Jiný zakázkový vývoj","Kompletní řešení od návrhu po nasazení"],
+ de: ["Unternehmenswebsite","Onlineshop / Kundenportal","Web-App / internes System","KI-Chatbot","Individueller KI-Agent","KI-Modul / Integration","Prozessautomatisierung","API / Backend / Integration","Python / Skripte / Daten","Kotlin / Android","Flutter / Android / iOS","Power BI / Reporting","Excel / Power Query / VBA","Tableau / Visualisierung","SQL / Datenbanken","Oracle / PL/SQL","Sonstige Individualentwicklung","Komplettlösung bis zum Deployment"],
+ pl: ["Strona firmowa","Sklep / portal klienta","Aplikacja webowa / system wewnętrzny","Chatbot AI","Agent AI na zamówienie","Moduł AI / integracja","Automatyzacja procesów","API / backend / integracje","Python / skrypty / dane","Kotlin / Android","Flutter / Android / iOS","Power BI / raportowanie","Excel / Power Query / VBA","Tableau / wizualizacje","SQL / bazy danych","Oracle / PL/SQL","Inne oprogramowanie na zamówienie","Kompletne rozwiązanie od projektu do wdrożenia"],
+ es: ["Web corporativa","Tienda / portal de clientes","Aplicación web / sistema interno","Chatbot de IA","Agente de IA a medida","Módulo de IA / integración","Automatización de procesos","API / backend / integraciones","Python / scripts / datos","Kotlin / Android","Flutter / Android / iOS","Power BI / informes","Excel / Power Query / VBA","Tableau / visualización","SQL / bases de datos","Oracle / PL/SQL","Otro desarrollo a medida","Solución integral hasta el despliegue"],
+};
+const budgetLabels: Record<string,string> = {sk:"Potrebujem nacenenie",cs:"Potřebuji nacenění",en:"Need a quote",de:"Angebot benötigt",pl:"Potrzebuję wyceny",es:"Necesito presupuesto"};
+
 const feedback = {
   sk: { sending: "Odosielam požiadavku…", success: "Vaša požiadavka bola úspešne odoslaná.", thanks: "Ďakujeme za váš záujem. Budeme vás kontaktovať e-mailom.", error: "Požiadavku sa nepodarilo odoslať. Skúste to, prosím, neskôr." },
   cs: { sending: "Odesílám poptávku…", success: "Vaše poptávka byla úspěšně odeslána.", thanks: "Děkujeme za váš zájem. Budeme vás kontaktovat e-mailem.", error: "Poptávku se nepodařilo odeslat. Zkuste to prosím později." },
@@ -28,7 +38,8 @@ type Language = keyof typeof data;
 type Status = "idle" | "sending" | "success" | "error" | "missing";
 
 export default function ContactForm() {
-  const { lang } = useLanguage();
+  const { lang: rawLang } = useLanguage();
+  const lang = rawLang === ("cz" as string) ? "cs" : rawLang;
   const language: Language = Object.prototype.hasOwnProperty.call(data, lang)
     ? (lang as Language) : "sk";
   const t = data[language];
@@ -63,6 +74,7 @@ export default function ContactForm() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
         cache: "no-store",
+        signal: AbortSignal.timeout(45000),
       });
       const result: { success?: boolean } | null = await response.json().catch(() => null);
       if (!response.ok || result?.success !== true) {
@@ -71,7 +83,7 @@ export default function ContactForm() {
       }
       // A UI reset must never turn an accepted SMTP submission into an error.
       setStatus("success");
-      try { form.reset(); } catch { /* Delivery has already succeeded. */ }
+      try { form.reset(); } catch { /* Submission already accepted. */ }
     } catch {
       setStatus("error");
     } finally {
@@ -93,9 +105,9 @@ export default function ContactForm() {
         <label><span>{t.email}</span><input name="email" type="email" autoComplete="email" placeholder="name@example.com" required maxLength={254} disabled={sending} /></label>
         <label><span>{t.phone}</span><input name="phone" type="tel" autoComplete="tel" placeholder="+421 ..." maxLength={80} disabled={sending} /></label>
       </div>
-      <label><span>{t.need}</span><select name="service" defaultValue={services[0]} disabled={sending}>{services.map(s => <option value={s} key={s}>{s}</option>)}</select></label>
+      <label><span>{t.need}</span><select name="service" defaultValue={services[0]} disabled={sending}>{services.map((s,i) => <option value={s} key={s}>{optionLabels[language]?.[i] ?? s}</option>)}</select></label>
       <div className="field-row">
-        <label><span>{t.budget}</span><select name="budget" defaultValue={budgets[0]} disabled={sending}>{budgets.map(b => <option value={b} key={b}>{b}</option>)}</select></label>
+        <label><span>{t.budget}</span><select name="budget" defaultValue={budgets[0]} disabled={sending}>{budgets.map((b,i) => <option value={b} key={b}>{i===0 ? budgetLabels[language] : b}</option>)}</select></label>
         <label><span>{t.deadline}</span><input name="deadline" placeholder={t.deadlinePh} maxLength={200} disabled={sending} /></label>
       </div>
       <label><span>{t.detail}</span><textarea name="message" rows={7} placeholder={t.detailPh} required maxLength={10000} disabled={sending} /></label>

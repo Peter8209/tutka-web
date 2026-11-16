@@ -1063,3 +1063,22 @@ img, video, canvas { max-width: 100%; }
  .hero-profile-card:hover,.service-card:hover,.button:hover { transform:none; }
 }
 @media print { .tutka-footer,.tutka-navigation-frame { display:none!important; } }
+
+/* REV09: compact public-first homepage, no lead gate. */
+.rev09-home .hero { min-height:0; padding-bottom:90px; }
+.rev09-home .hero h1 { font-size:clamp(38px,5vw,66px); line-height:1.05; }
+.rev09-home .hero-lead { max-width:64ch; }
+.rev09-home .hero-content { gap:clamp(24px,5vw,64px); }
+.rev09-home .section { padding-block:clamp(48px,6vw,86px); }
+.rev09-home .hero-profile-card { align-self:stretch; width:100%; }
+.rev09-capabilities { border:1px solid #ffffff20; border-radius:20px; background:#111c30; padding:18px; }
+.rev09-cap-heading { color:#8ff4e7; letter-spacing:.16em; font-size:11px; font-weight:800; padding:0 0 12px; }
+.rev09-capabilities a { display:grid; grid-template-columns:32px minmax(0,1fr) 18px; gap:12px; align-items:center; border-top:1px solid #ffffff18; padding:16px 0; color:#fff; }
+.rev09-capabilities a:hover { color:#8ff4e7; }
+.rev09-cap-index { color:#8ff4e7; font-size:12px; font-weight:700; }
+.rev09-capabilities strong,.rev09-capabilities small { display:block; }
+.rev09-capabilities small { color:#b7c8da; margin-top:5px; font-size:12px; }
+.rev09-capabilities svg { width:18px; fill:none; stroke:currentColor; stroke-width:1.8; }
+.rev09-home .service-arrow:focus-visible,.rev09-capabilities a:focus-visible { outline:2px solid #45d6c4; outline-offset:4px; }
+.rev09-portfolio { scroll-margin-top:100px; }
+@media(max-width:680px){.rev09-home .hero{padding-top:108px;padding-bottom:76px}.rev09-home .hero h1{font-size:clamp(34px,8vw,50px)}.rev09-capabilities{padding:14px}.rev09-home .wrap{width:calc(100% - 32px)}}

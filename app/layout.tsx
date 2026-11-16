@@ -3,7 +3,6 @@ import "./globals.css";
 import { LanguageProvider } from "@/components/LanguageProvider";
 import SiteShell from "@/components/SiteShell";
 import "@/components/legal/legal.css";
-import "@/components/leads/lead.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.tutka.sk"),

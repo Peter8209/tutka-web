@@ -1,7 +1,7 @@
 "use client";
 
-import { legalConfig as c } from "./legal/legal-config";
-import { legalHref, legalTitle, ui, type LegalKind, type LegalLang } from "./legal/legal-shared";
+import { company as c } from "@/lib/company";
+import { legalHref, legalTitle, type LegalKind, type LegalLang } from "./legal/legal-shared";
 import { CookieSettingsButton } from "./legal/CookieConsent";
 
 const copy = {
@@ -98,7 +98,6 @@ export default function Footer({ lang }: { lang: LegalLang }) {
           <div>
             <h2>{t[3]}</h2>
             <address><strong>{c.legalName}</strong><br/>{c.address}<br/>{t[7]}: {c.companyId}<br/>{t[8]}: {c.taxId}{c.vatId && <><br/>VAT: {c.vatId}</>}{c.registration && <><br/>{t[9]}: {c.registration}</>}</address>
-            {c.draft && <p className="tutka-footer-draft">{ui[lang].draft}</p>}
           </div>
           <div>
             <h2>{t[2]}</h2>
@@ -114,7 +113,7 @@ export default function Footer({ lang }: { lang: LegalLang }) {
             <p>www.tutka.sk</p>
           </div>
         </div>
-        <div className="tutka-footer-bottom"><span>© {c.version.slice(0,4)} TUTKA. {t[4]}</span><a href="/">{t[5]} <span aria-hidden="true">↑</span></a></div>
+        <div className="tutka-footer-bottom"><span>© {new Date().getFullYear()} TUTKA. {t[4]}</span><a href="/">{t[5]} <span aria-hidden="true">↑</span></a></div>
       </div>
     </footer>
   );

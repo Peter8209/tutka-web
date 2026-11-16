@@ -1,0 +1,6 @@
+import { baseServices, serviceTitles, copy, type HomeLang } from "@/lib/home-copy";
+import { IconArrow } from "./HomeIcons";
+export default function Services({lang}:{lang:HomeLang}) { const t=copy[lang]; const services=[5,6,0,3,4,7,1,2].map((i,index)=>({number:String(index+1).padStart(2,"0"),title:serviceTitles[lang][i],text:t.serviceTexts[i],tags:baseServices[i][1]})); return (
+  <section className="section wrap" id="sluzby"><div className="section-heading services-heading"><div><div className="eyebrow dark"><span/>{t.expertise}</div><h2>{t.servicesH}<br/><em>{t.servicesEm}</em></h2></div><div className="services-intro"><p>{t.servicesIntro}</p><a className="services-cta" href="#kontakt">{t.discuss}<IconArrow/></a></div></div><div className="services-grid">{services.map((s,i)=><article className={`service-card ${i===1?"service-card-featured":""}`} key={s.number}><div className="service-card-top"><div className="service-number">{s.number}</div><span className="service-dot"/></div><div className="service-card-copy"><h3>{s.title}</h3><p>{s.text}</p></div><div className="service-card-bottom"><div className="tag-row">{s.tags.map((tag:string)=><span key={tag}>{tag}</span>)}</div><a className="service-arrow" href="#kontakt" aria-label={`${t.discuss}: ${s.title}`}><IconArrow/></a></div></article>)}</div></section>
+);
+}
